@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #333;}
+        .wrap{
+            width: 1500px;
+            display: flex;
+            margin: 0 auto;
+        }
+        .flex{
+            width: 450px;
+            height: 485px;
+            padding: 10px;
+            display: flex;
+            margin: 0 auto
+        }
+        .container1 div:first-child{
+            background-image: url(./images/review1.jpg);
+            background-size: cover;
+            width: 452px;
+            height: 240px;
+            margin-bottom: 10px;
+        }
+        .container1 div:nth-child(2){
+            background-image: url(./images/review2.jpeg);
+            background-size: cover;
+            background-position: center;
+            width: 215px;
+            height: 215px;
+            margin-right: 20px;
+        }
+        .container1 div:nth-child(3){
+            background-image: url(./images/review3.jpg);
+            background-size: cover;
+            width: 215px;
+            height: 215px;
+        }
+        .container1{/*부모가 줄어도 자식요소사이즈 유지*/
+            flex-wrap: wrap;
+        }
+
+        .container1-1 div:first-child{
+            background-image: url(./images/review4.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 260px;
+            height: 475px;
+        }
+        .container1-1{/*부모가 줄어도 자식요소사이즈 유지*/
+            flex-wrap: wrap;
+        }
+        .container2 div:first-child{
+            background-image: url(./images/review5.jpg);
+            background-size: cover;
+            width: 215px;
+            height: 215px;
+            margin-right: 20px;
+        }
+        .container2 div:nth-child(2){
+            background-image: url(./images/review6.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 215px;
+            height: 215px;
+        }
+        .container2 div:nth-child(3){
+            background-image: url(./images/review7.jpg);
+            background-size: cover;
+            width: 452px;
+            height: 240px;
+            margin-top: 10px;
+        }
+        .container2{/*부모가 줄어도 자식요소사이즈 유지*/
+            flex-wrap: wrap;
+        }
+
+        .container2-1 div:first-child{
+            background-image: url(./images/review8.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 260px;
+            height: 475px;
+        }
+        .container2-1{/*부모가 줄어도 자식요소사이즈 유지*/
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="flex container1">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="flex container1-1">
+            <div></div>
+        </div>
+        <div class="flex container2">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="flex container2-1">
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

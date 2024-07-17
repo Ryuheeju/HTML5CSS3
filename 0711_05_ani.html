@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
+        .txt{
+            font-size: 70px;
+            font-weight: bold;
+            position: relative;
+        }
+        .black{
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation-name: txt;
+            animation-duration: 3s;
+            overflow: hidden;/*넘친글자 가리기*/
+            white-space: nowrap;/*줄바꿈처리방지*/
+            animation-iteration-count: infinite;
+        }
+        .gray{
+            color: #e6e6e6;
+        }
+        .black{
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation-name: txt;
+            animation-duration: 3s;
+            overflow: hidden;/*넘친글자 가리기*/
+            white-space: nowrap;/*줄바꿈처리방지*/
+            animation-iteration-count: infinite;
+        }
+        .gray{
+            color: #e6e6e6;
+        }
+        @keyframes txt{
+            0%{width: 0;}
+            100%{width: 100%;}            
+        }
+        .txt3{
+            font-size: 70px;
+            font-weight: bold;
+            position: relative;
+        }
+        .txt3 .black{
+            animation-delay: 0.1s;
+        }
+        h1{
+            font-size: 100px;
+            -webkit-text-stroke: 1px red;
+            text-stroke: 1px red;
+            color: yellow;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="txt">
+        <p class="black">Harness Your Data to</p>
+        <p class="gray">Harness Your Data to</p>
+    </div>
+    <div class="txt3">
+        <p class="black">Boost Efficiency and Reduce Emissions</p>
+        <p class="gray">Boost Efficiency and Reduce Emissions</p>
+    </div>
+    <h1>text-stroke</h1>
+</body>
+</html>

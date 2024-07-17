@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
+        div{
+            width: 100px;
+            height: 100px;
+            background: green;
+            margin: 10px;
+            animation: move 5s 1s;
+        }
+        div.none{
+            animation-fill-mode: none;
+        }
+        div.forwards{
+            animation-fill-mode: forwards;
+        }
+        div.backwards{
+            animation-fill-mode: backwards;
+        }
+        div.both{
+            animation-fill-mode: both;
+        }
+        @keyframes move {
+            0%{transform: translateX(0);background: red;}
+            100%{transform: translateX(500px);background: yellow;}
+        }
+    </style>
+</head>
+<body>
+    <div class="none">none</div><!--애니메이션이 끝난 후 상태를 설정하지 않는다_초록색으로 시작해서 시작점 초록색으로 돌아옴-->
+    <div class="forwards">forwards</div><!--애니메이션이 끝난 후 그 지점에 그대로 있는다_초록색으로 시작해서 끝나는 지점 노란색으로 유지됨-->
+    <div class="backwards">backwards</div><!--애니메이션이 끝난 후 시작점으로 돌아온다_빨간색으로 시작해서 시작점 초록색으로돌아옴-->
+    <div class="both">both</div><!--애니메이션의 앞 뒤 결과를 조합하여 설정한다_빨간색으로 시작해서 끝나는 지점 노란색으로 유지됨-->
+</body>
+</html>

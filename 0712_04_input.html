@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :focus{outline: none;}
+    </style>
+</head>
+<body>
+    <form action="" method="post"></form>
+    <fieldset><!--그룹선-->
+        <legend>안녕!</legend><!--그룹선중간에 텍스트-->
+        <p>인풋박스 : <input type="text"
+            maxlength="10"/*최대바이트수*/
+            minlength="5"/*최소바이트수*/
+            size="20"/*인풋박스사이즈*/
+            placeholder="여기에 쓰세요~"
+            required/*필수로 입력하세요*/
+            autofocus/*자동으로 인풋에 선택*/
+            onfocus="this.placeholder=''"/*한번클릭시 플레이스 예시문구가 사라짐*/
+            >
+        </p>
+        <p>전화번호 : <input type="tel" placeholder="여기에 번호를 쓰세요~" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"></p>
+        <p><input type="number" value="0" min="0"></p>
+    </fieldset>
+</body>
+</html>

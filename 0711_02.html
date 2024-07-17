@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #333;}
+        .wrap{
+            width: 760px;
+            height: 200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        ul li{
+            width: calc(100% / 4);
+            height: 250px;
+            float: left;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 40px;
+        }
+        ul li:hover{
+            background-position: 0 -240px;
+            animation-name: ani;
+            animation-duration: 0.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            background-position-x: center;
+            background-position-y: 40px;
+        }
+        @keyframes ani {
+        0%{transform: translateY(0);}/*from*/
+        100%{transform: translateY(20px);}/*to*/
+        }
+        ul li:first-child{
+            background-image: url(./images/bg_info_m06.png);
+
+        }
+        ul li:nth-child(2){
+            background-image: url(./images/bg_info_m02.png);
+
+        }
+        ul li:nth-child(3){
+            background-image: url(./images/bg_info_m03.png);
+
+        }
+        ul li:nth-child(4){
+            background-image: url(./images/bg_info_m04.png);
+
+        }
+        ul li p:last-child{
+            margin-top: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+            <li>
+                <a href="#">
+                    <p></p>
+                    <p>대전청년포털</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p></p>
+                    <p>도시주택정보</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p></p>
+                    <p>동물보호센터</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <p></p>
+                    <p>보건환경연구원</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

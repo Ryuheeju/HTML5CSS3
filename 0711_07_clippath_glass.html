@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
+        /*img{clip-path: circle(300px);원_이미지위에 클리핑 동그라미의 크기}*/
+        /*img:hover{clip-path: ellipse(300px 100px at 10% 20%);}타원_이미지위에 클리핑 동그라미의 크기}*/
+        /*img{clip-path: polygon(300px 100px,200px 300px, 500px 300px);}xy자표:3개부터시작*/
+        /*img{clip-path: inset(100px 200px 300px 400px);}*/
+            .imgBox{
+                width: 500px;
+                height: 300px;
+                overflow: hidden;
+                margin: 50px;
+                position: relative;
+            }
+            .blurBox{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                width: 100%;
+                height: 100%;
+                transition: 0.5s;
+                clip-path: inset(0);
+                z-index: 2;
+            }
+            .imgBox img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .imgBox>img{
+                filter: blur(5px);
+            }
+            .imgBox:hover .blurBox{
+                clip-path: inset(15px round 250px 250px 0 0);
+            }
+            .imgBox::before{
+                width: 100%;
+                height: 100%;
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                background: rgba(255, 255, 255, 0.3);
+                z-index: 1;
+            }
+    </style>
+</head>
+<body>
+    <div class="imgBox">
+        <img src="https://glassdome.com/img/front/main/platform_img2.webp" alt="img">
+        <div class="blurBox">
+            <img src="https://glassdome.com/img/front/main/platform_img2.webp" alt="blur">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;
+            background: #111;}
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .wrap{
+            background: #111;
+        }
+        .wrap .con{
+            width: 1200px;
+            height: 893px;
+            background: #111;
+            margin: 100px auto;
+        }
+        .wrap .con .top{
+            background: #111;
+            width: 100%;
+            height: 151px;
+        }
+        .wrap .con .top img{
+            width: 300px;
+            height: 19px;
+        }
+        .wrap .con .top h1{
+            margin-top: 40px;
+            font-size: 32px;
+            color: #fff;
+        }
+        .wrap .con .left{
+            width: 472px;
+            height: 720px;
+            background: #111;
+            margin: 80px 0;
+            position: relative;
+        }
+        .wrap .con .left>ul>li{
+            padding: 30px 0;
+            border-bottom: 1px solid #989898;
+        }
+        .wrap .con .left>ul>li:hover{
+            border-bottom: 2px solid #fff;
+        }
+        .wrap .con .left ul>li>a{
+            font: 20px;
+            color: #989898;
+            transition: 0.2s;
+        }
+        .wrap .con .left ul>li> .sub{
+            width: 600px;
+            opacity: 0;
+            position: absolute;
+            top: -20px;
+            left: 600px;
+            color: #fff;
+            margin: 10px;
+        }
+        .wrap .con .left ul>li> .sub>li p{
+            margin: 50px 0;
+            line-height: 35px;
+        
+        }
+        .wrap .con .left ul>li> .sub>li>.button:hover{
+            background-color: #2970ff;
+            border: 1px solid #2970ff;
+        }
+        .wrap .con .left ul>li> .sub>li>.button{
+            border: 1px solid #fff;
+            width: 172px;
+            height: 35px;
+            text-align: center;
+            border-radius: 5px;
+            padding-top: 10px;
+        }
+        .wrap .con .left ul>li> .sub>li>.button>img{
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+        .wrap .con .left ul>li>span>img{
+            opacity: 0;
+            vertical-align: middle;
+        }
+        .wrap .con .left ul > li:first-child:hover > a{
+            font-size: 24px;
+            color: #2970ff;
+        }
+        .wrap .con .left ul > li:hover > span img{
+            opacity: 100%;
+        }
+        .wrap .con .left ul>li:first-child:hover> .sub{
+            opacity: 100%;
+        }
+        .wrap .con .left ul>li:nth-child(2):hover> .sub{
+            opacity: 100%;
+        }
+        .wrap .con .left ul>li:nth-child(3):hover> .sub{
+            opacity: 100%;
+        }
+        .wrap .con .left ul>li:nth-child(4):hover> .sub{
+            opacity: 100%;
+        }
+        .wrap .con .left ul>li:nth-child(5):hover> .sub{
+            opacity: 100%;
+        }
+        .wrap .con .left ul > li:nth-child(2):hover > a{
+            font-size: 24px;
+            color: #2ccbe5;
+        }
+        .wrap .con .left ul > li:nth-child(3):hover > a{
+            font-size: 24px;
+            color: #2ca8fc;
+        }
+        .wrap .con .left ul > li:nth-child(4):hover > a{
+            font-size: 24px;
+            color: #8ab1ff;
+        }
+        .wrap .con .left ul > li:nth-child(5):hover > a{
+            font-size: 24px;
+            color: #55d8c5;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="con">
+            <div class="top">
+                <img src="안랩/images/toplogo.png" alt="toplogo">
+                <h1>디지털 비즈니스 혁신을 위한<br>
+                    최적의 보안 플랫폼</h1>
+            </div>
+            <div class="left">
+                <ul>
+                    <li><a href="#">AhnLab CONNECT PLUS</a>
+                            <span><img src="안랩/images/connectafter.png" alt="cloudafter"></span>
+                        <ul class="sub">
+                            <li><img src="안랩/images/connect.png" alt="connect">
+                                <p>AhnLab CONNECT PLUS는 XDR, SOAR, TI 플랫폼 등으로 구성되어<br>
+                                    연계와 연동을 기반으로 통합 보안의 정점에 선 차세대 보안 플랫폼입니다.</p>
+                                    <div class="button">View Mores
+                                        <img src="안랩/images/more.svg" alt="more">
+                                    </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">AhnLab CLOUD PLUS</a>
+                        <span><img src="안랩/images/CLOUDafter.png" alt="cloudafter"></span>
+                        <ul class="sub">
+                            <li><img src="안랩/images/cloud.png" alt="connect">
+                                <p>AhnLab CLOUD PLUS는 클라우드 워크로드 보안 플랫폼(CWPP)부터<br>
+                                    클라우드 최적화 방화벽, IPS 등 최상의 기술력을 갖춘 솔루션을 통해<br>
+                                    고객의 디지털 혁신 기반을 마련합니다.</p>
+                                    <div class="button">View Mores
+                                        <img src="안랩/images/more.svg" alt="more">
+                                    </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">AhnLab ENDPOINT PLUS</a>
+                        <span><img src="안랩/images/ENDPOINTafter.png" alt="cloudafter"></span>
+                        <ul class="sub">
+                            <li><img src="안랩/images/endpoint.png" alt="connect">
+                                <p>AhnLab ENDPOINT PLUS는 PC, 서버, 모바일, OT 기기 등 여러 엔드포인트<br>
+                                    자산에 대한 위협을 체계적으로 방어하는 엔드포인트 보안 플랫폼입니다.</p>
+                                    <div class="button">View Mores
+                                        <img src="안랩/images/more.svg" alt="more">
+                                    </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">AhnLab NETWORK PLUS</a>
+                        <span><img src="안랩/images/NETWORKafter.png" alt="cloudafter"></span>
+                        <ul class="sub">
+                            <li><img src="안랩/images/network.png" alt="connect">
+                                <p>AhnLab NETWORK PLUS는 방화벽, IPS, 디도스 대응, 샌드박스 등<br>
+                                    여러 솔루션들이 유기적으로 연동하여 최상의 보안 역량을 제공하는<br>
+                                    네트워크 보안 플랫폼입니다.</p>
+                                    <div class="button">View Mores
+                                        <img src="안랩/images/more.svg" alt="more">
+                                    </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">AhnLab SERVICE PLUS</a>
+                        <span><img src="안랩/images/serviceafter.png" alt="cloudafter"></span>
+                        <ul class="sub">
+                            <li><img src="안랩/images/cloud.png" alt="connect">
+                                <p>안랩의 보안 전문가들이 수십 년간 축적해온 경험과 노하우를 바탕으로<br>
+                                    최상의 보안 서비스를 제공해 안전한 비즈니스 환경을 조성합니다.</p>
+                                    <div class="button">View Mores
+                                        <img src="안랩/images/more.svg" alt="more">
+                                    </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

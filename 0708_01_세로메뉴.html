@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{ list-style: none;}
+        a{text-decoration: none;}
+        
+        .wrap{
+            width: 1000px;
+            border: 1px solid;
+        }
+        .index{
+            width: 200px;
+            height: 650px;
+            border: 1px solid;
+        }
+        .index img{
+            width: 200px;
+            height: 100px;
+            object-fit: contain;
+        }
+        .index .menu li{
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            margin: 0 auto;
+            vertical-align: middle;
+            line-height: 40px;
+        }
+        .index .menu li:first-child{
+            border: 1px solid;
+            border-bottom: none;
+        }
+        .index .menu li{
+            border: 1px solid;
+            border-bottom: #fff;
+        }
+        .index .menu li:last-child{
+            border: 1px solid #000;
+        }
+        .index .menu li a{
+            color: #000;
+        }
+        .index > .menu > li:hover{
+            border: 1px solid #000;
+            background-color: #000;
+            color: #fff;
+        }
+        .index > .menu > li:hover a{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="index">
+            <img src="./images/heeju_logo.jpg" alt="logo">
+            <ul class="menu">
+                <li><a href="#">이용안내</a></li>
+                <li><a href="#">이벤트정보</a></li>
+                <li><a href="#">프로그램</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

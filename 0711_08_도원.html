@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
+        /* .view{
+            height: 100px;
+            background: #000;
+        } */
+        .view{
+            height: 60px;
+        }
+        .view p{
+            margin: 0 auto;
+            width: 130px;
+            height: 20px;
+            padding: 10px 0;
+            background-image: url(https://www.t-won.com/img/main/brand_bg.jpg);
+            padding: 20px;
+            position: relative;
+            color: rgba(0, 0, 0, 0);
+        }
+        .view p:hover{
+            color: #fff;
+        }
+        .view p::after{
+            content: "+";
+            color: #000;
+            font-size: 35px;
+            text-align: center;
+            line-height: 45px;
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border-radius: 50px;
+            position: absolute;
+            top: 4px;
+            left: 0;
+            transition: 0.5s;
+        }
+        .view p:hover:after{
+            color: #fff;
+            background: #ae874e;
+            transform: translateX(110px);
+        }
+    </style>
+</head>
+<body>
+    <div class="view">
+        <p>View more</p>
+    </div>
+</body>
+</html>

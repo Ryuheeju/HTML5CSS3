@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #333;}
+        /* menu1시작 */
+        .menu1{
+            width: 100%;
+            background-color: #e2fdfe;
+        }
+        .menu1 .subMenuLink{
+            position: relative;
+            width: 1080px;
+            height: 100px;
+            margin: 5px auto 0;
+            padding: 50px 0;
+        }
+        .menu1 .subMenuLink > ul{
+            padding-bottom: 50px;
+        }
+        .menu1 .subMenuLink > ul > li{
+            width: calc(100% / 6 - 1px);
+            height: 100%;
+            border-right: 1px solid #ccc;
+            background-color: #e2fdfe;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 7px;
+            float: left;
+        }
+        .menu1 .subMenuLink > ul > li:last-child{
+            border: none;
+        }
+        .menu1 .subMenuLink > ul > li > a > span img{
+            width: 48px;
+            position: relative;
+            z-index: 2;
+        }
+        .menu1 .subMenuLink > ul > li > a > span{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #222;
+            border-radius: 50px;
+        }
+        .menu1 .subMenuLink > ul > li > a > p{
+            color: #222;
+            font-size: 16px;
+            font-family: 'NanumSquare';
+            margin-top: 10px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="menu1">
+            <div class="subMenuLink">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>
+                                <img src="./images/ico_quick_menu1.png" alt="ico_quick">
+                            </span>
+                            
+                            <p>이용대금명세서</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><img src="./images/ico_quick_menu2.png" alt="ico_quick"></span>
+                            <p>결제예상금액</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><img src="./images/ico_quick_menu3.png" alt="ico_quick"></span>
+                            <p>이용내역조회</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><img src="./images/ico_quick_menu4.png" alt="ico_quick"></span>
+                            <p>내정보변경</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><img src="./images/ico_quick_menu5.png" alt="ico_quick"></span>
+                            <p>카드분실신고</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><img src="./images/ico_quick_menu6.png" alt="ico_quick"></span>
+                            <p>카드사용등록</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

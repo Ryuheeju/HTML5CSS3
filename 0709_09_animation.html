@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        div:first-child{
+            width: 960px;
+            height: 640px;
+            background-image: url(./images/photo1.jpg);
+            background-size: 100% 640px;/*사이즈안맞는 이미지 강제 줄이기*/
+            animation-name: bg;/*내가 설정한 이름*/
+            animation-duration: 10s;/*시간*/
+            animation-iteration-count: infinite;/*반복재생*/
+            animation-direction: alternate;/*진행방향_왔다갔다*/
+        }
+        /*
+        ease:느린 시작, 빠르게 시작, 느리게 종료하는 전환 효과를 지정(기본값)
+        linear:처음부터 끝까지 동일한 속도
+        ease-in:느린시작
+        ease-out:느린 끝
+        ease-in-out:느린 시작과 끝
+        cubic-bezier(n,n,n,n):
+        */
+        @keyframes bg {
+           0%{background-image: url(./images/photo1.jpg);}
+           20%{background-image: url(./images/photo2.jpg);}
+           40%{background-image: url(./images/photo3.jpg);}
+           60%{background-image: url(./images/photo4.jpg);}
+           80%{background-image: url(./images/photo5.jpg);}
+           100%{background-image: url(./images/photo6.jpg);}
+        }
+    </style>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>

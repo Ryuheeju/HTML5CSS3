@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        .wrap{
+            width: 1500px;
+
+            height: 300px;
+            background: #fff;
+            margin: 64px auto;
+        }
+        .wrap .our{
+            width: 50%;
+            height: 150px;
+            float: left;
+        }
+        .wrap .our > p{
+            font-size: 117px;
+            line-height: 100px;
+            word-break: break-all;
+        }
+        .wrap .menu{
+            width: 50%;
+            background: #fff;
+            float: left;
+        }
+        .wrap .menu>li{
+            margin: 10px 0;
+            transition: 1s;
+            border-bottom: 1px solid;
+        }
+        .wrap .menu>li:first-child{
+            border-top: 1px solid;
+            padding: 10px 0;
+        }
+        .wrap .menu>li>a{
+            font-size: 30px;
+            color: #000;
+        }
+        .wrap .menu>li>span:nth-of-type(1){/*+기호*/
+            font-size: 35px;
+            overflow: hidden;
+            right: 200px;
+            position: absolute;
+        }
+        .wrap .menu>li>span:nth-of-type(2){/*기호*/
+            font-size: 35px;
+            overflow: hidden;
+            top: 100px;
+            right: 210px;
+            position: absolute;
+            display: none;
+        }
+        .wrap .menu>li:hover>span:nth-of-type(1){
+            display: none;
+        }
+        .wrap .menu>li:hover>span:nth-of-type(2){
+            display: block;
+        }
+        .wrap .menu .sub{
+            margin: 10px 0;
+        }
+        .wrap .menu .sub>li{
+            display: none;
+            font-size: 14px;
+            color: #0000009c;
+        }
+        .wrap .menu>ul>li:hover .sub{
+            display: block;
+        }
+        .wrap .menu > li:hover .sub>li{
+            display: block;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="our">
+            <p>Our<br>Services.</p>
+        </div>
+        <ul class="menu">
+            <li><a href="#">UXUI</a>
+                <span>+</span>
+                <span>-</span>
+                <ul class="sub">
+                    <li><p>Concept Proposal / UX Planning /  UI Design</p></li>
+                </ul>
+            </li>
+            <li><a href="#">Motion</a>
+                <span>+</span>
+                <ul class="sub">
+                    <li><p>Scenario Planning / 2D Motion graphic Design / 3D Modeling & Animation / 3D VFX</p></li>
+                </ul>
+            </li>
+            <li><a href="#">Production</a>
+                <span>+</span>
+                <ul class="sub">
+                    <li><p>Pre-Production / Production / Post-Production</p></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

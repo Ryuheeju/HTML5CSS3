@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        div:first-child{
+            width: 100px;
+            height: 100px;
+            background: red;
+            animation-name: ani;/*내가 설정한 이름*/
+            animation-duration: 2s;/*시간*/
+            animation-iteration-count: infinite;/*반복재생*/
+            animation-direction: alternate;/*진행방향_왔다갔다*/
+            border-radius: 50%;/*동그라미만들기*/
+            animation-timing-function: ease-in;
+            position: absolute;
+        }
+        /*
+        ease:느린 시작, 빠르게 시작, 느리게 종료하는 전환 효과를 지정(기본값)
+        linear:처음부터 끝까지 동일한 속도
+        ease-in:느린시작
+        ease-out:느린 끝
+        ease-in-out:느린 시작과 끝
+        cubic-bezier(n,n,n,n):
+        */
+        @keyframes ani {
+            0%,100%{bottom: 0;animation-timing-function: ease-out;}/*from*/
+            50%{bottom: 200px;animation-timing-function: ease-in;}
+            /*100%{bottom: 0;animation-timing-function: ease-out;}/*to*/
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

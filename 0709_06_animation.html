@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        div{
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            animation-name: ani;/*내가 설정한 이름*/
+            animation-duration: 1s;/*시간*/
+            animation-timing-function: linear;/*일정속도*/
+            animation-delay: 1s;/*대기시간, but전체시간에서 -됨*/
+            animation-iteration-count: infinite;/*반복재생*/
+            animation-direction: alternate;/*진행방향_왔다갔다*/
+        }
+        @keyframes ani {
+            from{background: red;}
+            to{transform: translateX(100px);background: yellow;}
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

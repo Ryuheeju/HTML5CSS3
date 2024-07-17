@@ -1,0 +1,36 @@
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+header{
+    height: 60px;
+    padding: 10px;
+}
+header ul li a{
+    line-height: 60px;
+    font-size: 14px;
+    display: block;
+    padding: 0 10px;
+}
+header ul li a img{
+    vertical-align: middle;
+}
+header ul.left{
+    float: left;
+}
+header ul.left li{
+    float: left;
+}
+header ul.right{
+    float: right;
+}
+header ul.right li{
+    float: left;
+}
+header ul.right li:last-child a{
+    background: #1a73e8;
+    line-height: 30px;
+}
+header ul li a:hover{
+    text-decoration: underline;
+}

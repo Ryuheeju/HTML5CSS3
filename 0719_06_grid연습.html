@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #wrap{
+            width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 215px 215px 215px 215px 215px 215px;
+            grid-template-rows: 215px 215px;
+            gap: 22px;
+        }
+        .review1{
+        background: #aaa;
+        background-image: url(./images/review1.jpg);
+        background-size: cover;
+        grid-column: 1 / span 2;
+        }
+        .review2{
+        background: yellow;
+        background-image: url(./images/review4.jpg);
+        background-size: cover;
+        grid-row: 1 / span 2;
+        grid-column: 3;
+        }
+        .review3{
+        background: #aaa;
+        background-image: url(./images/review5.jpg);
+        background-size: cover;
+        }
+        .review4{
+        background: #aaa;
+        background-image: url(./images/review6.jpg);
+        background-size: cover;
+        }
+        .review5{
+        background: purple;
+        background-image: url(./images/review8.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-row: 1 / span 2;
+        grid-column: 6;
+        }
+        .review6{
+        background: #aaa;
+        background-image: url(./images/review2.jpeg);
+        background-size: cover;
+        }
+        .review7{
+        background: #bbb;
+        background-image: url(./images/review3.jpg);
+        background-size: cover;
+        }
+        .review8{
+        background: red;
+        background-image: url(./images/review7.jpg);
+        background-size: cover;
+        grid-column: 4 / span 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="review1"></div>
+        <div class="review2"></div>
+        <div class="review3"></div>
+        <div class="review4"></div>
+        <div class="review5"></div>
+        <div class="review6"></div>
+        <div class="review7"></div>
+        <div class="review8"></div>
+
+
+    </div>
+</body>
+</html>

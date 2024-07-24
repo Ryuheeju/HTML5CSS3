@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #333;}
+        .content{
+            width: 1180px;
+            height: 1120px;
+            margin: 0 auto;
+            font-size: 0;
+        }
+        .content>ul{
+            display: flex;
+            gap: 20px;
+        }
+        .content>ul li ul{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .content > ul li ul li{
+            position: relative;
+            font-size: 16px;
+            overflow: hidden;
+        }
+        .content > ul li ul li p{
+            color: #fff;
+            position: absolute;
+            bottom: 30px;
+            padding-left: 30px;
+        }
+        .content > ul li:first-child ul li:first-child{
+            width: 380px;
+            height: 620px;
+            overflow: hidden;
+        }
+        .content > ul li:first-child ul li:last-child{
+            width: 380px;
+            height: 480px;
+            overflow: hidden;
+        }
+
+        .content > ul li:nth-child(2) ul li:first-child{
+            width: 380px;
+            height: 480px;
+            overflow: hidden;
+        }
+        .content > ul li:nth-child(2) ul li:last-child{
+            width: 380px;
+            height: 620px;
+            overflow: hidden;
+        }
+
+        .content > ul li:nth-child(3) ul li:first-child{
+            width: 380px;
+            height: 620px;
+            overflow: hidden;
+        }
+        .content > ul li:nth-child(3) ul li:last-child{
+            width: 380px;
+            height: 480px;
+            overflow: hidden;
+        }
+
+        .content > ul li ul li img{
+            width: 100%;
+            transition: 0.5s;
+        }
+        .content > ul li ul li:hover img{
+            width: 120%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <ul>
+            <li>
+                <ul>
+                    <li><img src="./images/main_b01.jpg" alt="img1">
+                        <P>팬데믹 이전으로 부활한 CES 2024</P>
+                    </li>
+                    <li><img src="./images/main_b04.jpg" alt="img4">
+                        <P>팬데믹 이전으로 부활한 CES 2024</P>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><img src="./images/main_b02.jpg" alt="img2">
+                        <P>팬데믹 이전으로 부활한 CES 2024</P>
+                    </li>
+                    <li><img src="./images/main_b05.jpg" alt="img5">
+                        <P>팬데믹 이전으로 부활한 CES 2024</P>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><img src="./images/main_b03.jpg" alt="img3">
+                        <P>팬데믹 이전으로 부활한 CES 2024</P>
+                    </li>
+                    <li><img src="./images/main_b06.jpg" alt="img6">
+                        <P>팬데믹 이전으로 부활한 CES 2024</P>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

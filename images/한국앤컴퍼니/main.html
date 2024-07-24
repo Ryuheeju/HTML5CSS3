@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국앤컴퍼니</title>
+    <style>
+        @font-face {
+            font-family: HankookKRTTFRegular;
+            src: url(./webfont/HankookKRTTFRegular.woff) format("woff");
+        }
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #333;}
+
+        main{
+            width: 1180px;
+            margin: 0 auto;
+            font-size: 0;
+        }
+        .content{
+            display: flex;
+            gap: 20px;
+        }
+        .content2{
+            display: flex;
+            gap: 20px;
+        }
+        .content2>div:nth-child(2){
+            position: relative;
+            top: -120px;
+        }
+        .cont>div{
+            width: 380px;
+            height: 620px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cont>div>p{
+            font-family: HankookKRTTFRegular;
+            font-size: 24px;
+            bottom: 50px;
+            left: 20px;
+            color: #fff;
+            position: absolute;
+            line-height: 30px;
+        }
+   
+        .content>div:nth-child(2),
+        .content2>div:nth-child(1),
+        .content2>div:nth-child(3)
+        {
+            width: 380px;
+            height: 480px;
+            overflow: hidden;
+        }
+        .content2>div:nth-child(1){
+            top: 20px;
+        }
+        .content2>div:nth-child(3){
+            top: 20px;
+        }
+        .cont>div img{
+            transition: 0.3s;
+        }
+        .cont>div:hover img{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="content cont">
+            <div>
+                <img src="./images/main_b01.jpg" alt="main1">
+                <p>팬데믹 이전으로 부활한 CES<br>2024</p>
+            </div>
+            <div>
+                <img src="./images/main_b02.jpg" alt="main2">
+                <p>닛산, 항상 도전한다</p>
+            </div>
+            <div><img src="./images/main_b03.jpg" alt="main3">
+                <p>포뮬러 E 백스테이지</p>
+            </div>
+        </div>
+        <div class="content2 cont">
+            <div><img src="./images/main_b04.jpg" alt="main4">
+                <p>지속 가능한 환경을 위한<br>
+                    지속 불가능한 규제</p>
+            </div>
+            <div><img src="./images/main_b05.jpg" alt="main5">
+                <p>포뮬러 E 시즌 10 프리뷰</p>
+            </div>
+            <div><img src="./images/main_b06.jpg" alt="main6">
+                <p>챗GPT 이후…<br>
+                    2024년 우리가 주목할 기술</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

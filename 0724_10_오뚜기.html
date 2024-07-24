@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: OttogiSans-m;
+            src: url(./webfonts/OttogiSans-Medium.otf) format("opentype");
+        }
+        @font-face {
+            font-family: OttogiSans-l;
+            src: url(./webfonts/OttogiSans-Light.otf) format("opentype");
+        }
+        *{margin: 0;padding: 0;}
+        div.wrap{
+            width: 1462px;
+            height: 500px;
+            margin: 50px auto;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+        }
+        div.wrap .text{
+            width: 500px;
+        }
+        div.wrap .text>p,img{
+            padding: 20px 0;
+        }
+        div.wrap .text p:first-child{
+            font-family: OttogiSans-m;
+            margin-top: 100px;
+            font-size: 48px;
+        }
+        div.wrap .text p:first-child>span{
+            color: #FFED00;
+            -webkit-text-stroke: 1px #000;
+        }
+        div.wrap .text p:nth-child(2){
+            font-family: OttogiSans-l;
+            line-height: 30px;
+            font-size: 18px;
+        }
+        section{
+            width: 520px;
+            height: 500px;
+        }
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+        section{
+            clip-path: url(#path1);
+        }
+        section{
+            animation-name: ani;/*내가 설정한 이름*/
+            animation-duration: 3s;/*시간*/
+            animation-timing-function: linear;/*일정속도*/
+            animation-delay: 1s;/*대기시간, but전체시간에서 -됨*/
+            animation-iteration-count: infinite;/*반복재생*/
+            animation-direction: alternate;/*진행방향_왔다갔다*/
+            background-size: cover;
+        }
+        
+        @keyframes ani {
+            0%{background-image: url(https://www.ottogi.co.kr/images/common/clip2.jpg);}
+            100%{background-image: url(https://www.ottogi.co.kr/images/common/clip2_1.jpg);}
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="text">
+            <p>보다 높은 영양을 위해<br>
+                <span>1969년</span>부터 한결같이</p>
+            <p>식품이 사람들의 심신 건강을 지키는 영양분이 될 수 있도록<br>
+                과거부터 현재까지 이어온<br>
+                그리고 앞으로도 계속 이어갈 오뚜기의 마음입니다.</p>
+            <img src="https://www.ottogi.co.kr/images/common/btn_more_pc.svg" alt="arrow">
+        </div>
+        <section>
+            <svg>
+                <clipPath id="path1" clipPathUnits="objectBoundingBox">
+                    <path d="M0.5,1 C0.469,1,0.439,0.996,0.419,0.989 L0.049,0.855 C0.025,0.846,0,0.809,0,0.781 V0.219 C0,0.191,0.025,0.154,0.049,0.145 L0.419,0.011 C0.439,0.004,0.469,0,0.5,0 C0.531,0,0.561,0.004,0.581,0.011 L0.951,0.145 C0.975,0.154,1,0.191,1,0.219 V0.781 C1,0.809,0.975,0.846,0.951,0.855 L0.581,0.989 C0.561,0.996,0.531,1,0.5,1"></path>
+                </clipPath>
+            </svg>
+        </section>
+    </div>
+</body>
+</html>

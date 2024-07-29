@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> ??-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"><!-- minimum,maximum때문에 유저스케러블?이 yes인 기본상태여도 모바일에서 크기를 확대하거나 줄일수 없다.-->
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .wrap{
+            width: 100%;
+            max-width: 1280px;/*디바이스가 커도 1280px이 최대 사이즈...*/
+            margin: 0 auto;
+            height: 300px;
+            background: red;
+        }
+        /* 미디어가 스크린 이니? 그리고 조건이 있니~{ 1280px 이하} */
+        @media screen and (max-width: 1280px) {
+         .wrap{
+            height: 500px;
+            background: blue;}
+        }
+        /* 위에있는 조건을 상속받음 (height 500px)*/
+        @media screen and (max-width: 1024px) {
+         .wrap{
+            background: yellow;}
+        }
+        @media screen and (max-width: 768px) {
+         .wrap{
+            background: green;}
+        }
+        @media screen and (max-width: 480px) {
+         .wrap{
+            background: pink;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap"></div>
+</body>
+</html>

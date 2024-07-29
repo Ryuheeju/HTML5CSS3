@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> ??-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"><!-- minimum,maximum때문에 유저스케러블?이 yes인 기본상태여도 모바일에서 크기를 확대하거나 줄일수 없다.-->
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
+        @font-face {
+            font-family: KakaoBig;
+            src: url(./webfont/KakaoBig-Regular-v1.0.woff2) format("woff2");
+        }
+        .wrap{
+            width: 1800px;
+            margin: 0 auto;
+        }
+        .wrap .con{
+            width: 1728px;
+            height: 160px;
+            margin: 0 auto;
+            display: flex;
+        }
+        .wrap .con>li{
+            width: 45%;
+            background: #f3f3f3;
+            border-radius: 24px;
+            display: flex;
+            margin: 16px 0 0 16px;
+            font-family: KakaoBig;
+            font-size: 30px;
+            font-weight: bold;
+            display: flex;
+            padding: 52px 65px;
+            justify-content: space-between;
+        }
+        .wrap .con>li>.icon{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .wrap .con>li>.icon>li>p{
+            padding: 0 0 0 12px;
+        }
+        .wrap .con>li>.icon>li>p>img{
+            width: 56px;
+            height: 56px;
+        }
+        .wrap .con>li>.icon>li:nth-child(4):hover>p>img{
+            background-image: url(./images/icon_4.svg);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="con">
+            <li>
+                <ul class="txt">
+                    <li><p>커뮤니케이이션</p></li>
+                </ul>
+                <ul class="icon">
+                    <li><p><img src="./images/icon_01.png" alt="icon"></p></li>
+                    <li><p><img src="./images/icon_02.png" alt="icon"></p></li>
+                    <li><p><img src="./images/icon_03.png" alt="icon"></p></li>
+                    <li><p><img src="./images/icon_5.svg" alt="icon"></p></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="txt">
+                    <li><p>비즈니스</p></li>
+                </ul>
+                <ul class="icon">
+                    <li><p><img src="./images/icon_06.png" alt="icon"></p></li>
+                    <li><p><img src="./images/icon_07.png" alt="icon"></p></li>
+                    <li><p><img src="./images/icon_08.png" alt="icon"></p></li>
+                    <li><p><img src="./images/icon_5.svg" alt="icon"></p></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="con">
+            <li>
+                <ul class="txt">
+                    <li><p>일상편의</p></li>
+                </ul>
+                <ul class="icon">
+                    <li><p><img src="./images/icon_09.png" alt="icon"></p></li>
+                    <li><p><img src="./images/icon_10.png" alt="icon"></p></li>
+                    <li><p><img src="./images/icon_11.png" alt="icon"></p></li>
+                    <li><p><img src="./images/icon_5.svg" alt="icon"></p></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="txt">
+                    <li><p>쇼핑</p></li>
+                </ul>
+                <ul class="icon">
+                    <li><p><img src="./images/icon_12.png" alt="icon_01"></p></li>
+                    <li><p><img src="./images/icon_13.png" alt="icon_02"></p></li>
+                    <li><p><img src="./images/icon_14.png" alt="icon_03"></p></li>
+                    <li><p><img src="./images/icon_5.svg" alt="icon_05"></p></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="con">
+            <li>
+                <ul class="txt">
+                    <li><p>엔터테인먼트</p></li>
+                </ul>
+                <ul class="icon">
+                    <li><p><img src="./images/icon_15.png" alt="icon"></p></li>
+                    <li><p><img src="./images/icon_16.png" alt="icon"></p></li>
+                    <li><p><img src="./images/icon_17.png" alt="icon"></p></li>
+                    <li><p><img src="./images/icon_5.svg" alt="icon"></p></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="txt">
+                    <li><p>소셜임팩트</p></li>
+                </ul>
+                <ul class="icon">
+                    <li><p><img src="./images/icon_18.png" alt="icon_01"></p></li>
+                    <li><p><img src="./images/icon_5.svg" alt="icon_05"></p></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

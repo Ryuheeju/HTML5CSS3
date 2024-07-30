@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        #wrap{
+            width: 100%;
+            margin: 0 auto;
+        }
+        #wrap .txt{
+            width: 980px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            margin-bottom: 60px;
+        }
+        #wrap .txt h1{
+            font-size: 42px;
+        }
+        #wrap .txt p{
+            padding: 10px;
+            font-size: 19px;
+            line-height: 1.8rem;
+        }
+        ul{
+            width: 100%;
+            max-width: 1600px;
+            height: 360px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            background: #ddd;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        ul li{
+            width: 25%;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative;
+            background-size: 120%;
+            background-position: center;
+            transition: background-size .3s ease;
+        }
+        ul li:hover {
+            background-size: 130%;
+        }
+        ul li:hover:after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        ul li:nth-child(1){
+            background-image: url(./images/sam_img_01.jpg);
+        }
+        ul li:nth-child(1):hover:after{
+            background: rgba(0, 163, 241, 0.84);
+        }
+        ul li:nth-child(2){
+            background-image: url(./images/sam_img_02.png);
+        }
+        ul li:nth-child(2):hover:after{
+            background: rgba(219, 92, 41, 0.79);
+        }
+        ul li:nth-child(3){
+            background-image: url(./images/sam_img_03.jpg);
+        }
+        ul li:nth-child(3):hover:after{
+            background: rgba(139, 185, 6, 0.76);
+        }
+        ul li:nth-child(4){
+            background-image: url(./images/sam_img_04.jpg);
+        }
+        ul li:nth-child(4):hover:after{
+            background: rgba(0, 163, 241, 0.64);
+        }
+        ul li p{
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            z-index: 1;
+            position: relative;
+        }
+        ul li p:nth-child(2){
+            font-size: 16px;
+            transform: translateY(50px);
+            transition: 0.3s;
+            opacity: 0;
+        }
+        ul li:hover p:nth-child(2){
+            opacity: 1;
+            transform: translateY(10px);
+        }
+        ul li p:nth-child(3){
+            padding-top: 20px;
+            height: 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: 0.3s;
+        }
+        ul li:hover p:nth-child(3){
+            opacity: 1;
+            transform: translateY(10px);
+        }
+        @media screen and (max-width:1540px){
+            ul{
+                width: 100%;
+            }
+            ul li{
+                padding: 25px;
+            }
+            ul li p{
+                font-size: 32px;
+            }
+            ul li{
+                background-size: cover;
+            }
+        }
+        @media screen and (max-width:1024px){
+            ul{
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            ul li p:nth-child(3){
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+            ul li{
+                background-size: cover;
+            }
+        }
+        @media screen and (max-width:768px){
+            ul{
+                width: 95%;
+                flex-wrap: wrap;
+            }
+            ul li{
+                width: 50%;
+                height: 230px;
+                background-position: center
+            }
+        }
+        @media screen and (max-width:480px){
+            ul{
+                width: 90%;
+                flex-wrap: wrap;
+            }
+            ul li{
+                width: 100%;
+                height: 175px;
+                background-position: center
+            }
+            ul li:nth-child(1){
+            background-image: url(./images/sam_img_01_670.jpg);
+            }
+            ul li:nth-child(2){
+                background-image: url(./images/sam_img_02_670.png);
+            }
+            ul li:nth-child(3){
+                background-image: url(./images/sam_img_03_670.jpg);
+            }
+            ul li:nth-child(4){
+                background-image: url(./images/sam_img_04_670.jpg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+    <div class="txt">
+        <h1>삼양은 언제나<br>
+            당신의 곁에 있습니다.</h1>
+        <p>스페셜티 사업 및 글로벌 시장확대를 위해<br>
+            화학, 식품, 의약바이오, 패키징 사업으로<br>
+            미래성장동력을 만들어갑니다.</p>
+    </div>
+    <ul>
+        <li>
+            <p>화확</p>
+            <p>언제나 편리하게</p>
+            <p><img src="./images/sam_icon.svg" alt="icon"></p>
+        </li>
+        <li>
+            <p>식품</p>
+            <p>누구나 풍요롭게</p>
+            <p><img src="./images/sam_icon.svg" alt="icon"></p>
+        </li>
+        <li>
+            <p>의약바이오</p>
+            <p>오래도록 건강하게</p>
+            <p><img src="./images/sam_icon.svg" alt="icon"></p>
+        </li>
+        <li>
+            <p>패키징</p>
+            <p>어디서나 즐겁게</p>
+            <p><img src="./images/sam_icon.svg" alt="icon"></p>
+        </li>
+    </ul>
+    </div>
+</body>
+</html>

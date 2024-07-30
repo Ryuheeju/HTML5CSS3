@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{
+            list-style: none;
+        }
+        #wrap{
+            width:1200px;
+            max-width:1280px;
+            margin: 0 auto;
+        }
+        #wrap ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #wrap ul li{
+            width: 240px;
+            height: 360px;
+            background-size: cover;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+        #wrap ul li:nth-child(1){
+            background-image: url(./images/SNPE_1.png);
+        }
+        #wrap ul li:nth-child(2){
+            background-image: url(./images/SNPE_2.png);
+        }
+        #wrap ul li:nth-child(3){
+            background-image: url(./images/SNPE_3.png);
+        }
+        #wrap ul li:nth-child(4){
+            background-image: url(./images/SNPE_4.png);
+        }
+        #wrap ul li h2,p{
+            color: #fff;
+            font-weight: bold;
+        }
+        @media screen and (max-width:1024px){
+            #wrap{
+                width: 65%;
+            }
+            #wrap ul{
+                padding: 0 10px;
+            }
+            #wrap ul li{
+            width: 150px;
+            height: 225px;
+            }
+            
+        }
+        @media screen and (max-width:768px){
+            #wrap{
+                width: 48%;
+            }
+            #wrap ul{
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+        #wrap ul li p{
+            display: none;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul>
+            <li>
+                <h2>수영</h2>
+                <p>#다이어트 #유산소 #재활 </p>
+            </li>
+            <li>
+                <h2>볼링</h2>
+                <p>#여가활동#구기종목</p>
+            </li>
+            <li>
+                <h2>헬스</h2>
+                <p>#다이어트 #체력증진 #근력운동</p>
+            </li>
+            <li>
+                <h2>스피닝</h2>
+                <p>#단기다이어트 #유산소</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

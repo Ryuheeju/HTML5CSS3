@@ -16,6 +16,10 @@
         }
         ul{list-style: none;}
         a{text-decoration: none; color: #444;}
+        #wrap h4{
+            font-size: 22px;
+            display: none;
+        }
         #wrap>p{
             font-family: NanumBarunGothic;
             width: 100%;
@@ -84,33 +88,35 @@
         #wrap .orangebox{
             background: #c76f53;
             margin: 10px auto;
-            width: 940px;
+            width:100%;
+            max-width:940px;
             height: 180px;
             text-align: center;
             color: #fff;
-            padding: 46px;
-            box-sizing: border-box;
-            position: relative;
         }
         #wrap .orangebox h3{
+            margin: 0 auto;
             font-size: 30px;
             line-height: 39px;
+            /* position: relative; */
         }
-        #wrap .orangebox h3::before{
+        #wrap .orangebox:before{
             content: "";
-            position: absolute;
-            top: 67px;
-            left: 250px;
+            display: inline-block;
+            position: relative;
+            top: 70px;
+            left: -200px;
             width: 79px;
             height: 44px;
             background-image: url(./images/ico_management_sprits.png);
             background-repeat: no-repeat;
         }
-        #wrap .orangebox h3::after{
+        #wrap .orangebox:after{
             content: "";
-            position: absolute;
-            top: 73px;
-            left: 632px;
+            display: inline-block;
+            position: relative;
+            bottom: 65px;
+            left: 200px;
             width: 32px;
             height: 32px;
             background-image: url(./images/ico_management_sprits.png);
@@ -121,6 +127,8 @@
             font-size: 15px;
             padding-top: 16px;
         }
+
+        /* 이하 반응형 */
         @media screen and (max-width:960px){
             br{
                 display: none;
@@ -150,7 +158,6 @@
             #wrap .orangebox{
                 width: 100%;
                 height: 95px;
-                padding: 30px;
             }
             #wrap .orangebox h3{
                 line-height: 0px;
@@ -159,23 +166,40 @@
             #wrap .orangebox p{
                 font-size: 12px;
             }
-            #wrap .orangebox h3::before{
-                top: 34px;
-                left: 30px;
+            #wrap .orangebox:before{
+                top: 35px;
+                left: -40%;
                 width: 47px;
                 height: 30px;
                 background-size: 130px 38px;
+                background-position: 0 0;
             }
-            #wrap .orangebox h3::after{
-                top: 36px;
+            #wrap .orangebox:after{
+                bottom: 30px;
+                left: 43%;
+                width: 22px;
+                height: 22px;
                 background-size: 130px 38px;
                 background-position: -108px 0;
+            }
+        }
+        @media screen and (max-width:640px){
+            #wrap h4{
+                color: #444;
+                margin-top: 30px;
+                display: block;
+                letter-spacing: -1px;
+            }
+            #wrap>p{
+                font-size: 14px;
+                margin-top: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div id="wrap">
+        <h4>경영정보</h4>
         <p>명확한 비전과 전략으로 최고의 투자 가치를 실현하는 신세계푸드</p>
         <ul>
             <li>

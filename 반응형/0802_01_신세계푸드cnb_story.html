@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #333;}
+        body{
+            background: #f0f0f0;
+        }
+        .wrap{
+            width: 100%;
+            max-width: 940px;
+            margin: 0 auto;
+        }
+        .wrap>p{
+            font-weight: bold;
+            display: inline-block;
+            font-size: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: relative;
+            border-bottom: 4px solid #000;
+        }
+        .wrap>p::after{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -11px;
+            right: -35px;
+            width: 43px;
+            height: 38px;
+            background: url(https://www.shinsegaefood.com/images/icon/icon_vs_ttl.png);
+        }
+        .wrap ul{
+            margin-top: 120px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .wrap ul li{
+            flex: 1 0 40%;
+            width: calc(50%  - 20px);
+            border-radius: 70px 0 70px 0;
+            position: relative;
+            overflow: hidden;
+            background: #ddd;
+        }
+        .wrap ul li:nth-child(2),
+        .wrap ul li:nth-child(4)
+        {
+            top: 40px;
+        }
+        .wrap ul li img{
+            width: 100%;
+            height: 100%;
+        }
+        .wrap ul li a{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding-top: 23px;
+            box-sizing: border-box;
+        }
+        .wrap ul li a .txt{
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .wrap ul li a p{
+            position: relative;
+            text-align: center;
+            color: #fff;
+        }
+        .wrap ul li>a p:nth-child(1){
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .wrap ul li>a p:nth-child(2){
+            margin-top: 26px;
+            font-size: 20px;
+            word-break: keep-all;
+        }
+        @media screen and (max-width:960px) {
+            br{display: none;}
+            .wrap>p{
+                font-size: 22px;
+                border-bottom: 2px solid #000;
+            }
+            .wrap>p::after{
+                width: 22px;
+                height: 17px;
+                top: 17px;
+                right: -20px;
+                background-position: top left;
+                background-size: cover;
+            }
+            .wrap ul{
+                margin-top: 30px;
+                gap: 23px;
+                padding: 0 10px;
+            }
+            .wrap ul li>a p:nth-child(1){
+                font-size: 16px;
+            }
+            .wrap ul li>a p:nth-child(2){
+                margin-top: 10px;
+                font-size: 14px;
+                padding: 0 10px;
+            }
+            .wrap ul li a{
+                padding-top: 18px;
+            }
+            .wrap ul li a .txt{
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <p>Core Value</p>
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="txt">
+                        <p>Taste & Quality</p>
+                        <p>최선의 '품질'을통해<br>
+                            최상의 '맛'을 구현합니다</p>
+                    </div>
+                </a>
+                <img src="https://www.shinsegaefood.com/images/background/bg_vs_value_1.jpg" alt="img">
+            </li>
+            <li>
+                <a href="#">
+                    <div class="txt">
+                        <p>Convenience</p>
+                        <p>보관/조리/폐기 전반에 걸친 고객 중심<br>
+                            마인드로<br>
+                            최적화된 편의를 제공합니다.</p>
+                    </div>
+                </a>
+                <img src="https://www.shinsegaefood.com/images/background/bg_vs_value_2.jpg" alt="img">
+            </li>
+            <li>
+                <a href="#">
+                    <div class="txt">
+                        <p>Health & Wellness</p>
+                        <p>고객의 건강과 라이프스타일을 지원하는<br>
+                             맞춤형 푸드 옵션을 제공합니다.</p>
+                    </div>
+                </a>
+                <img src="https://www.shinsegaefood.com/images/background/bg_vs_value_3.jpg" alt="img">
+            </li>
+            <li>
+                <a href="#">
+                    <div class="txt">
+                        <p>Value</p>
+                        <p>지구와 사회에 긍정적인 영향을 주는<br>
+                            지속 가능하고 책임감 있는 사업을 이어갑니다.</p>
+                    </div>
+                </a>
+                <img src="https://www.shinsegaefood.com/images/background/bg_vs_value_4.jpg" alt="img">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

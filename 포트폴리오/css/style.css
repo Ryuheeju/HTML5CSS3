@@ -1,13 +1,29 @@
 @charset "utf-8";
-*{margin: 0;padding: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{margin: 0;padding: 0;
+    cursor: url(https://img.icons8.com/?size=100&id=jxd84l3wJsts&format=png&color=000000)2 2, auto;
+}
 ul{list-style: none;}
 a{text-decoration: none; color: #fff;}
 body{
+    font-family: 'Roboto', sans-serif;
     background: #0a0a0a;
     overflow-x:hidden
 }
-.wrap{
+body::-webkit-scrollbar{/*스크롤바의 너비*/
+    width: 7px;
+}
+body::-webkit-scrollbar-thumb{
+    height: 10%;/*바의 길이*/
+    background: #D9FF02;/*바의 색상*/
+}
+body::-webkit-scrollbar-track{
+    background: #0a0a0a;/*바의 뒷배경*/
+}
+#wrap{
     width: 100%;/*배너이미지 때문에*/
+    max-width: 1920px;
+    height: 10000px;
     position: relative;
     
 }
@@ -20,8 +36,9 @@ body{
     align-items: center;
     z-index: 1;
     position: sticky;
-    top: 0;
-    /* background: #DDD; */
+    top: 10px;
+    background: #0a0a0a;
+    border-radius: 20px;
 }
 #wrap header .top{
     width: 90%;
@@ -33,19 +50,28 @@ body{
 }
 #wrap header .top .logo{
     width: 80px;
-    height: 80px;
+    height: 50px;
     position: relative;
     transition: .4s;
     transform-style: preserve-3d;
+    top: 50%;
+    transform: translateY(-50%);
     /* background: #eee; */
 }
 #wrap header .top .logo:hover{
     transform: rotateY(180deg);
 }
+#wrap header .top .logo a:first-child{
+    display: flex;
+}
 #wrap header .top .logo a:first-child img{
     filter: invert(100%);/*색반전*/
-    margin-top: 60%;
-    transform: translateY(-60%);
+}
+#wrap header .top .logo a:nth-child(2) img{
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 #wrap header .top .logo a:first-child,
 #wrap header .top .logo a:nth-child(2){
@@ -55,6 +81,7 @@ body{
     backface-visibility: hidden;
 }
 #wrap header .top .logo a:nth-child(2){
+    width: 90%;
     transform: rotateY(180deg);
 }
 #wrap header .top .logo a img{
@@ -62,7 +89,6 @@ body{
 }
 #wrap header .top .menu{
     width: 100%;
-    /* background: green; */
 }
 #wrap header .top .menu > ul{
     display: flex;
@@ -162,26 +188,37 @@ body{
     100%{transform:rotateY(180deg)}}
 /* header끝 */
 /* main시작 */
-    /* main>cont1시작 */
     main{
         width: 100%;
-        /* background: #ccc; */
+        height: 500px;
+        max-width: 1920px;
         margin: 0 auto;
+    }
+    main .banner{
+        width: 100%;
+        overflow: hidden;
     }
     main .cont1{
         width: 100%;
-        height: 700px;
+        height: 100%;
         overflow: hidden;
-        /* background: #ddd; */
+        margin-top: 5%;
+    }
+    main .cont1 .main{
+        margin-top: 30px;
     }
     main .cont1 .main p{
         position: relative;
     }
+    main .cont1>p{
+        line-height: 230px;
+    }
     main .cont1>p:nth-child(1){
         font-size: 200px;
+        font-weight: 300;
         white-space: pre;
         animation: bigtextani;
-        animation-duration: 90s;
+        animation-duration: 100s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         color: #fff;
@@ -190,71 +227,75 @@ body{
     main .cont1>p:nth-child(2){
         margin-top: 200px;
         font-size: 200px;
+        font-weight: 300;
         white-space: pre;
         animation: bigtextani;
-        animation-duration: 90s;
+        animation-duration: 100s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         animation-direction: reverse;
         color: #fff;
         position: absolute;
     }
-    main .cont1 .main .mainimg>li{
+    main .cont1 .main .mainimg{
+        width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px 200px;
+        grid-template-rows: 200px 200px;
         position: relative;
+        gap: 10px;
+    }
+    main .cont1 .main .mainimg>li{
+        width: 180px;
+        height: 180px;
     }
     main .cont1 .main .mainimg>li img{
-        width: 200px;
-        height: 200px;
-        top: 50px;
-        right: 0px;
-        position: absolute;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-    }
-    main .cont1 .main .mainimg>li:nth-child(1){
-        right: -400px;
-        animation-name: mainimg;
-        animation-duration: 90s;
-        animation-iteration-count: infinite;
-    }
-    main .cont1 .main .mainimg>li:nth-child(2){
-        right: -500px;
-        top: 200px;
-        animation-name: mainimg;
-        animation-duration: 50s;
-        animation-iteration-count: infinite;
-    }
-    main .cont1 .main .mainimg>li:nth-child(3){
-        right: -600px;
-        animation-name: mainimg;
-        animation-duration: 40s;
-        animation-iteration-count: infinite;
-    }
-    main .cont1 .main .mainimg>li:nth-child(4){
-        top: 200px;
-        right: -700px;
-        animation-name: mainimg;
-        animation-duration: 35s;
-        animation-iteration-count: infinite;
-    }
-    main .cont1 .main .mainimg>li:nth-child(5){
-        right: -800px;
-        animation-name: mainimg;
-        animation-duration: 35s;
-        animation-iteration-count: infinite;
     }
     @keyframes bigtextani {
         0%{transform: translateX(0px);}
         100%{transform: translateX(-2000px);}
     }
-    @keyframes mainimg {
-        0%{transform: translateX(0px);}
-        100%{transform: translateX(-1000px);}
-    }
-    main .cont2{
+    main .cont3{
         width: 100%;
-        height: 2000px;
-        overflow: hidden;
-        /* background: #ddd; */
+        height: 1000px;
+        margin: 50px auto;
+        
+        /* background: rgba(999, 999, 999, 0.1); */
     }
-    /* main>cont1끝 */
+    main .cont3>ul{
+        width: 90%;
+        height: 700px;
+        margin: 0 auto;
+        display: flex;
+        background: #ddd;
+    }
+    main .cont3 ul>li{
+        background: rgba(0, 0, 0, 0.9);  
+    }
+    main .cont3 ul>li:nth-child(1){
+        width: 40%;
+    }
+    main .cont3 ul>li:nth-child(1) img{
+        width: 100%;
+        object-fit: cover;
+        
+    }
+    main .cont3 ul>li:nth-child(2) ul{
+        display: flex;
+        flex-direction: column;
+    }
+    main .cont3 ul>li:nth-child(2) ul li a p{
+        font-size: 60px;
+        font-weight: 500;
+        line-height: 150%;
+        transition: 0.2s;
+    }
+    main .cont3 ul>li:nth-child(2):hover ul li:hover a p{
+        color: #D9FF02;
+    }
+    
 /* main끝 */

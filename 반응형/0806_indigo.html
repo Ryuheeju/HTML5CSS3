@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        #weare{
+            width: 90%;
+            max-width: 1132px;
+            margin: 50px auto; 
+        }
+        #weare .top{
+            display: flex;
+            justify-content: space-between;           
+        }
+        #weare .top>p:first-child{
+            font-size: 42px;
+            color: #3f51b5;
+        }
+        #weare .top>p:last-child{
+            position: relative;
+            font-size: 16px;
+            color: #616161;
+            text-align: start;
+            padding-left: 20px;
+            word-break: keep-all;
+            line-height: 26px;
+        }
+        #weare .top>p:last-child::before{
+            content: "";
+            display: block;
+            left: 0px;
+            width: 2px;
+            height: 44px;
+            position: absolute;
+            background: #e0e0e0;
+        }
+        #weare .cont{
+            width: 100%;
+            display: flex;
+            text-align: center;
+            margin-top: 110px;
+            gap: 20px;
+        }
+        #weare .cont li{
+            cursor: pointer;
+            flex: 1 1 20%;
+        }
+        #weare .cont li p img{
+            height: 52px;
+        }
+        #weare .cont li p:nth-child(2){
+            margin: 29px 0 20px;
+            color: #3f51b5;
+        }
+        #weare .cont li p:nth-child(3){
+            word-break: keep-all;
+            font-size: 14px;
+            color: #616161;
+            word-break: keep-all;
+        }
+        @media screen and (max-width:1130px) {
+            #weare .top{
+                flex-direction: column;
+            }
+            #weare .top>p:first-child{
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            #weare .top>p:last-child{
+                text-align: center;
+            }
+            #weare .top>p:last-child::before{
+                display: none;
+            }
+        }
+        @media screen and (max-width:768px) {
+            #weare .cont{
+                margin-top: 0;
+                flex-direction: column;
+            }
+            #weare .cont li{
+                margin-top: 52px;
+            }
+        }
+
+        #work{
+            width: 100%;
+            max-width: 1920px;
+            margin-top: 200px;
+        }
+        #work>p{
+            width: 90%;
+            max-width: 1132px;
+            font-size: 42px;
+            color: #3f51b5;
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+        #work ul{
+            width: 100%;
+            flex-wrap: wrap;
+            display: flex;
+        }
+        #work ul li{
+            flex: 1 1 25%;
+            overflow: hidden;
+            position: relative;
+        }
+        #work ul li a:after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #3f51b5;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        #work ul li:hover a:after{
+            opacity: 0.9;
+        }
+        #work ul li a .subtxt{
+            height: 0;
+            position: absolute;
+            top: -10px;
+            color: #fff;
+            z-index: 1;
+            padding: 30px 40px;
+            transition: 0.2s;
+            opacity: 0;
+        }
+        #work ul li a .subtxt p:first-child{
+            font-size: 23px;
+            padding-bottom: 10px;
+        }
+        #work ul li a .subtxt p:last-child{
+            font-size: 11px;
+        }
+        #work ul li:hover a .subtxt{
+            top: 0px;
+            height: 100%;
+            opacity: 1;
+        }
+        #work ul li a img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media screen and (max-width:1130px){
+            #work>p{
+                text-align: center;
+            }
+            #work ul li{
+                flex-basis: 50%;
+            }
+        }
+        @media screen and (max-width:768px){
+            #work ul li{
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="weare">
+        <div class="top">
+            <p>WE ARE</p>
+            <P>
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a<br>
+                piece of classical Latin literature from 45 BC, making it over 2000 years old.
+            </P>
+        </div>
+        <ul class="cont">
+            <li>
+                <p><img src="./images/promo01.png" alt="img1"></p>
+                <p>HOME</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </li>
+            <li>
+                <p><img src="./images/promo02.png" alt="img2"></p>
+                <p>WE ARE</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </li>
+            <li>
+                <p><img src="./images/promo03.png" alt="img3"></p>
+                <p>WORK</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </li>
+            <li>
+                <p><img src="./images/promo04.png" alt="img4"></p>
+                <p>BLOG</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </li>
+        </ul>
+    </div>
+    <div id="work">
+        <p>WORK</p>
+        <ul>
+            <li>
+                <a href="#">
+                    <div class="subtxt">
+                        <p>Running</p>
+                        <p>WEB/PRINT</p>
+                    </div>
+                    <img src="./images/work01.jpg" alt="img1">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="subtxt">
+                        <p>Rugby</p>
+                        <p>WEB/PRINT</p>
+                    </div>
+                    <img src="./images/work02.jpg" alt="img1">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="subtxt">
+                        <p>Weight</p>
+                        <p>WEB/PRINT</p>
+                    </div>
+                    <img src="./images/work03.jpg" alt="img1">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="subtxt">
+                        <p>Marathone</p>
+                        <p>WEB/PRINT</p>
+                    </div>
+                    <img src="./images/work04.jpg" alt="img1">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="subtxt">
+                        <p>Boxing</p>
+                        <p>WEB/PRINT</p>
+                    </div>
+                    <img src="./images/work05.jpg" alt="img1">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="subtxt">
+                        <p>Ice Hockey</p>
+                        <p>WEB/PRINT</p>
+                    </div>
+                    <img src="./images/work06.jpg" alt="img1">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="subtxt">
+                        <p>Skate Board</p>
+                        <p>WEB/PRINT</p>
+                    </div>
+                    <img src="./images/work07.jpg" alt="img1">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="subtxt">
+                        <p>Backetball</p>
+                        <p>WEB/PRINT</p>
+                    </div>
+                    <img src="./images/work08.jpg" alt="img1">
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

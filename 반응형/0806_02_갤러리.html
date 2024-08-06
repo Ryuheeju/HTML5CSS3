@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;font-size: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color: #333;}
+        #wrap{
+            width: 95%;
+            max-width: 1080px;
+            margin: 0 auto;
+            
+        }
+        #wrap ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        #wrap ul li{
+            width: 24%;
+            padding-bottom: 1.5%;
+        }
+        #wrap ul li a img{
+            width: 100%;
+            filter: grayscale(1);
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        #wrap ul li:hover a img{
+            filter: grayscale(0);
+        }
+        @media screen and (max-width:960px){
+            #wrap{
+                width: 80%;
+            }
+            #wrap ul li{
+                width: 49%;
+            }
+        }
+        @media screen and (max-width:768px){
+            #wrap ul li{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul>
+            <li><a href="#"><img src="./images/sub_gallery_01.jpg" alt="img1"></a></li>
+            <li><a href="#"><img src="./images/sub_gallery_02.jpg" alt="img2"></a></li>
+            <li><a href="#"><img src="./images/sub_gallery_03.jpg" alt="img3"></a></li>
+            <li><a href="#"><img src="./images/sub_gallery_04.jpg" alt="img4"></a></li>
+            <li><a href="#"><img src="./images/sub_gallery_05.jpg" alt="img5"></a></li>
+            <li><a href="#"><img src="./images/sub_gallery_06.jpg" alt="img6"></a></li>
+            <li><a href="#"><img src="./images/sub_gallery_07.jpg" alt="img7"></a></li>
+            <li><a href="#"><img src="./images/sub_gallery_08.jpg" alt="img8"></a></li>
+            <li><a href="#"><img src="./images/sub_gallery_09.jpg" alt="img9"></a></li>
+            <li><a href="#"><img src="./images/sub_gallery_10.jpg" alt="img10"></a></li>
+            <li><a href="#"><img src="./images/sub_gallery_11.jpg" alt="img11"></a></li>
+            <li><a href="#"><img src="./images/sub_gallery_12.jpg" alt="img12"></a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{margin: 0;padding: 0;}
+    ul{list-style: none;}
+    .esg{
+        width: 90%;
+        max-width: 940px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .esg .first h2{
+        padding-bottom: 48px;
+    }
+    .esg .first ul{
+        width: 679px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .esg .first ul li{
+        width: 200px;
+        height: 200px;
+        background: #000;
+        border-radius: 50%;
+    }
+    .esg .first ul li::after{
+        content: ">";
+        font-size: 40px;
+        top: -65px;
+        left: 120px;
+        position: relative;
+        color: red;
+        display: block;
+    }
+    .esg .first ul li:nth-child(2){
+        background: #343434;
+    }
+    .esg .first ul li:nth-child(3){
+        background: #7d7d7d;
+    }
+    .esg .first ul li:nth-child(3):after{
+        display: none;
+    }
+    .esg .first ul li p{
+        color: #fff;
+        position: relative;
+    }
+    .esg .first ul li p:first-child{
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 30px;
+        padding: 20px 0 20px;
+        position: relative;
+    }
+    .esg .first ul li p:first-child::after{
+        content: "";
+        width: 40px;
+        height: 1px;
+        top: 55px;
+        left: 80px;
+        position: absolute;
+        background: #ddd;
+    }
+    .esg .second h3{
+        padding: 90px 0 34px;
+    }
+    @media screen and (max-width:960px){
+        .esg img{
+            width: 80%;
+            object-fit: cover;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="esg">
+        <div class="first">
+            <h2>사회적 책임경영의 가치체계</h2>
+            <ul>
+                <li>
+                    <p>경영이념</p>
+                    <p>사회적 책임을 근간으로<br>하는 경영이념</p>
+                </li>
+                <li>
+                    <p>신세계의 길</p>
+                    <p>사회적 책임을 실천하는<br>신념 및 방향</p>
+                </li>
+                <li>
+                    <p>신세계 Credo</p>
+                    <p>이해관계자들의 사회적<br>책입경영 실전강령</p>
+                </li>
+            </ul>
+        </div>
+        <div class="second">
+            <h3>경영이념</h3>
+            <p>"고객의 불만에서 기회를 찾고 관습을 타마하며<br>지속적으로 성장하는 혁신 기업"</p>
+        </div>
+    </div>
+</body>
+</html>

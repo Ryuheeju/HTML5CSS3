@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{margin: 0;padding: 0;}
+    ul{list-style: none;}
+    #wrap{
+        width: 100%;
+        max-width: 940px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #wrap .first{
+        width: 100%;
+        padding: 55px 0 90px;
+    }
+    #wrap .first p:first-child{
+        color: #444;
+        font-size: 25px;
+        font-weight: bold;
+        padding-bottom: 48px;
+    }
+    #wrap .first p:nth-child(2){
+        width: 100%;
+        max-width: 679px;
+        margin: 0 auto;
+    }
+    #wrap .first p:nth-child(2) img{
+        width: 100%;
+    }
+    #wrap .second p:first-child{
+        color: #444;
+        font-size: 25px;
+        font-weight: bold;
+        padding-bottom: 48px;
+    }
+    #wrap .second p:nth-child(2){
+        width: 100%;
+        max-width: 654px;
+        margin: 0 auto;
+    }
+    #wrap .second p:nth-child(2) img{
+        width: 100%;
+    }
+    @media screen and (max-width:960px){
+        #wrap .first{
+            padding: 20px 0px 90px;
+        }
+        #wrap .first p:first-child{
+            font-size: 16px;
+            padding-bottom: 20px;
+        }
+        #wrap .second p:first-child{
+            font-size: 16px;
+            padding-bottom: 15px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="first">
+            <p>사회적 책임경영의 가치체계</p>
+            <p><img src="https://www.shinsegaefood.com/images/background/bg_value_graph.png" alt="img1"></p>
+        </div>
+        <div class="second">
+            <p>경영이념</p>
+            <p><img src="https://www.shinsegaefood.com/images/background/bg_value_tit.png" alt="img2"></p>
+        </div>
+    </div>
+</body>
+</html>

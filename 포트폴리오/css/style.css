@@ -194,7 +194,6 @@ body::-webkit-scrollbar-track{
 /* main시작 */
     main{
         width: 100%;
-        height: 500px;
         max-width: 1920px;
         margin: 0 auto;
     }
@@ -265,21 +264,123 @@ body::-webkit-scrollbar-track{
     }
     main .cont2{
         width: 90%;
-        max-width: 1080px;
+        height: 100%;
+        max-width: 1200px;
         margin: 10% auto;
-        /* background: rgba(100,100,100,0.3); */
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+        /* background: #ddd; */
     }
-    main .cont2 ul li:nth-child(1){
-        background-size: 50px;
-        background-image: url(../images/mainimg_2.jpg);
+    main .cont2 ul{
+        flex: 1 1 45%;
     }
-    main .cont2 ul li a p{
-        font-size: 60px;
-        transition: 0.5s;
+    main .cont2 ul li{
+        position: relative;
+        padding: 20px 0;
+        border-bottom: 1px solid #aaa;
+        margin-bottom: 20px;
     }
-    main .cont2 ul li:hover a p{
-        font-size: 80px;
+    main .cont2 ul li:hover{
+        border-bottom: 1px solid #fff;
+    }
+    main .cont2>ul>li>a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main .cont2 ul li>a>p:nth-child(1){
+        font-size: 50px;
+    }
+    main .cont2 ul li:hover>a>p:nth-child(1){
+        color: #D9FF02;
+    }  
+    main .cont2>ul>li>a .arrow{
+        height: 30px;
+    }
+    main .cont2>ul>li>a .arrow >p{
+        width: 30px;
+    }
+    main .cont2>ul>li:hover>a .arrow >p:nth-child(2){
+        display: none;
+    }
+    main .cont2>ul>li>a .arrow >p img{
+        width: 30px;
+        position: absolute;
     }
 
-    
+    main .cont3{
+        width: 100%;
+        background: #121212;
+        padding: 200px 0;
+    }
+    main .cont3 .inner{
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    main .cont3 .inner>p:nth-child(1){
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        padding-bottom: 50px;
+        color: #fff;
+    }
+    main .cont3 .inner>ul{
+        display: flex;
+        gap: 30px;
+    }
+    main .cont3 .inner>ul li{
+        flex: 1 1 20%;
+        border: 1px solid #595959;
+        border-radius: 10px;
+        overflow: hidden;
+       
+    }
+    main .cont3 .inner>ul li a> p img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        filter: grayscale(0.8);
+        transition: 0.1s;
+    }
+    main .cont3 .inner>ul li:hover a> p img{
+        filter: grayscale(0);
+    }
+    main .cont3 .inner>ul li a> .txt{
+        padding: 20px;
+        border-radius: 10px;
+    }
+    main .cont3 .inner>ul li a> .txt p:nth-child(1){
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+    main .cont3 .inner>ul li a> .txt p:nth-child(2){
+        font-size: 15px;
+        line-height: 30px;
+        height: 55px;
+        overflow: hidden;
+        word-break: keep-all;
+    }
+    main .cont3 .inner>ul li a> .txt p:nth-child(3){
+        font-size: 14px;
+        padding-top: 50px;
+        color: #aaa;
+    }
+    main .cont3 .inner>p:nth-of-type(2){
+        width: 180px;
+        margin: 60px auto;
+        background: #333;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 45px;
+        text-align: center;
+        border-radius: 5px;
+        transition: 0.2s;
+    }
+    main .cont3 .inner>p:nth-of-type(2):hover{
+        background: #222;
+    }
+ 
 /* main끝 */

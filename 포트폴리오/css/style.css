@@ -1,12 +1,12 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 *{margin: 0;padding: 0;
     /* cursor: url(https://img.icons8.com/?size=100&id=jxd84l3wJsts&format=png&color=000000)2 2, auto; */
 }
 ul{list-style: none;}
 a{text-decoration: none; color: #fff;}
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'pretendard', sans-serif;
     background: #0a0a0a;
     overflow-x:hidden
 }
@@ -22,19 +22,17 @@ body::-webkit-scrollbar-track{
 }
 #wrap{
     width: 100%;/*배너이미지 때문에*/
-    max-width: 1920px;
     height: 10000px;
     position: relative;
-    
+    margin: 0 auto;
 }
-
 
 /* header시작 */
 #wrap header{
     margin: 20px auto;
     width: 100%;
     max-width: 1800px;
-    height: 80px;
+    height: 100px;
     align-items: center;
     z-index: 1;
     position: sticky;
@@ -44,7 +42,7 @@ body::-webkit-scrollbar-track{
 }
 #wrap header .top{
     width: 90%;
-    height: 80px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
@@ -52,7 +50,7 @@ body::-webkit-scrollbar-track{
 }
 #wrap header .top .logo{
     width: 80px;
-    height: 50px;
+    height: 100%;
     position: relative;
     transition: .4s;
     transform-style: preserve-3d;
@@ -103,7 +101,7 @@ body::-webkit-scrollbar-track{
 #wrap header .top .menu > ul > li{
     width: calc(100% / 4);
     text-align: center;
-    line-height: 80px;
+    line-height: 100px;
 }
 #wrap header .top .menu > ul > li > a{
     font-size: 18px;
@@ -152,8 +150,8 @@ body::-webkit-scrollbar-track{
 #wrap header .top .lang > ul > li{
     width: 100%;
     padding-right: 20px;
-    font-size: 14px;
-    line-height: 80px;
+    font-size: 15px;
+    line-height: 100px;
     position: relative;
 }
 #wrap header .top .lang > ul > li:nth-child(1):after{
@@ -194,30 +192,41 @@ body::-webkit-scrollbar-track{
 /* main시작 */
     main{
         width: 100%;
-        max-width: 1920px;
         margin: 0 auto;
     }
     main .banner{
         width: 100%;
+        height: 100%;
         overflow: hidden;
+        background: #ddd;
     }
+    main .banner>p.gotop{
+        position: sticky;
+        right: 0;
+        bottom: 0;
+    }
+
     main .cont1{
         width: 100%;
         height: 100%;
         overflow: hidden;
-        margin-top: 10%;
+        padding: 10% 0;
+        background: #000;
     }
     main .cont1 .main{
+        width: 100%;
+        height: 100%;
         margin-top: 50px;
     }
     main .cont1 .main p{
         position: relative;
     }
     main .cont1>p{
-        line-height: 230px;
+        line-height: 250px;
+        font-style: italic;
     }
     main .cont1>p:nth-child(1){
-        font-size: 200px;
+        font-size: 1000%;
         font-weight: 300;
         white-space: pre;
         animation: bigtextani;
@@ -229,7 +238,7 @@ body::-webkit-scrollbar-track{
     }
     main .cont1>p:nth-child(2){
         margin-top: 200px;
-        font-size: 200px;
+        font-size: 1000%;
         font-weight: 300;
         white-space: pre;
         animation: bigtextani;
@@ -240,22 +249,25 @@ body::-webkit-scrollbar-track{
         color: #fff;
         position: absolute;
     }
+
     main .cont1 .main .mainimg{
-        width: 1000px;
+        width: 100%;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 200px 200px 200px 200px 200px;
         grid-template-rows: 200px 200px;
         position: relative;
-        gap: 10px;
+        top: -20px;
+        justify-content: center;
     }
     main .cont1 .main .mainimg>li{
-        width: 180px;
-        height: 180px;
+        width: 100%;
+        height: 100%;
     }
     main .cont1 .main .mainimg>li img{
         width: 100%;
         height: 100%;
+        border-radius: 10px;
         object-fit: cover;
     }
     @keyframes bigtextani {
@@ -311,76 +323,87 @@ body::-webkit-scrollbar-track{
 
     main .cont3{
         width: 100%;
-        background: #121212;
-        padding: 200px 0;
+        background: #000;
+        padding: 10% 0;
     }
     main .cont3 .inner{
         width: 100%;
-        max-width: 1200px;
+        max-width: 1600px;
         margin: 0 auto;
     }
-    main .cont3 .inner>p:nth-child(1){
-        text-align: center;
-        font-size: 40px;
-        font-weight: bold;
-        padding-bottom: 50px;
+    main .cont3 .inner .newstxt{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 60px;
         color: #fff;
+    }
+    main .cont3 .inner .newstxt>p:nth-child(1){
+        font-size: 48px;
+        font-weight: bold;
+    }
+    main .cont3 .inner .newstxt>p:nth-child(2){
+        font-size: 18px;
+    }
+    main .cont3 .inner .newstxt>p:nth-child(2) span{
+        padding: 0 10px;
+        transition: 0.5s;
+    }
+    main .cont3 .inner .newstxt>p:nth-child(2):hover span{
+        padding-left: 10px;
+        padding-right: 0;
     }
     main .cont3 .inner>ul{
         display: flex;
-        gap: 30px;
+        gap: 20px;
     }
     main .cont3 .inner>ul li{
         flex: 1 1 20%;
-        border: 1px solid #595959;
-        border-radius: 10px;
+        /* border: 1px solid #595959; */
         overflow: hidden;
-       
+        background: #151515;
+        border-radius: 10px;
+    }
+    main .cont3 .inner>ul li:hover{
+        background: #222;
+    }
+    main .cont3 .inner>ul li a> p{
+        height: 204px;
+        overflow: hidden;
     }
     main .cont3 .inner>ul li a> p img{
         width: 100%;
-        height: 200px;
+        height: 100%;
         object-fit: cover;
         filter: grayscale(0.8);
-        transition: 0.1s;
+        transition: 0.2s;
     }
     main .cont3 .inner>ul li:hover a> p img{
         filter: grayscale(0);
+        transform: scale(1.05);
     }
     main .cont3 .inner>ul li a> .txt{
-        padding: 20px;
-        border-radius: 10px;
+        padding: 40px 35px;
+        border-radius: 20px;
+        letter-spacing: -1px;
     }
     main .cont3 .inner>ul li a> .txt p:nth-child(1){
-        font-size: 24px;
-        font-weight: bold;
+        font-size: 16px;
         margin-bottom: 25px;
     }
     main .cont3 .inner>ul li a> .txt p:nth-child(2){
-        font-size: 15px;
-        line-height: 30px;
+        font-size: 20px;
+        font-weight: bold;
         height: 55px;
         overflow: hidden;
         word-break: keep-all;
     }
     main .cont3 .inner>ul li a> .txt p:nth-child(3){
-        font-size: 14px;
-        padding-top: 50px;
-        color: #aaa;
-    }
-    main .cont3 .inner>p:nth-of-type(2){
-        width: 180px;
-        margin: 60px auto;
-        background: #333;
-        font-size: 14px;
-        font-weight: bold;
-        line-height: 45px;
-        text-align: center;
-        border-radius: 5px;
-        transition: 0.2s;
-    }
-    main .cont3 .inner>p:nth-of-type(2):hover{
-        background: #222;
+        font-size: 16px;
+        padding-top: 40px;
+        color: #999;
     }
  
 /* main끝 */

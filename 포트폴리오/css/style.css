@@ -105,6 +105,7 @@ body::-webkit-scrollbar-track{
 }
 #wrap header .top .menu > ul > li > a{
     font-size: 18px;
+    font-weight: bold;
 }
 #wrap header .top .menu > ul > li:hover > a{
     text-decoration: underline;
@@ -114,15 +115,20 @@ body::-webkit-scrollbar-track{
     width: 100%;
     height: 0;
     background: #fff;
-    line-height: 50px;
+    line-height: 45px;
     transition: 0.2s;
     overflow: hidden;
     border-radius: 10px;
     text-align: left;
-    padding-left: 30px    
+    padding-left: 30px;
+}
+#wrap header .top .menu > ul > li > ul.sub > li{
+    padding-top: 2px;
 }
 #wrap header .top .menu > ul > li > ul.sub > li a{
     color: gray;
+    font-weight: bold;
+    font-size: 18px;
 }
 #wrap header .top .menu > ul > li > ul.sub > li:hover{
     color: #000;
@@ -193,17 +199,30 @@ body::-webkit-scrollbar-track{
     main{
         width: 100%;
         margin: 0 auto;
+        position: relative;
+        background: #000;
+    }
+    main .gotop{
+        position: absolute;
+        z-index: 100;
+        /* width: 100%;
+        height: 100%; */
+    }
+    main .gotop a{
+        display: block;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+    }
+    main .gotop a img{
+        width: 60px;
+        height: 60px;
     }
     main .banner{
         width: 100%;
         height: 100%;
-        overflow: hidden;
-        background: #ddd;
-    }
-    main .banner>p.gotop{
-        position: sticky;
-        right: 0;
-        bottom: 0;
+        margin: 0 auto;
+        overflow: hidden;/*?*/
     }
 
     main .cont1{
@@ -224,32 +243,32 @@ body::-webkit-scrollbar-track{
     main .cont1>p{
         line-height: 250px;
         font-style: italic;
+        font-weight: bold;
+        -webkit-text-stroke: 2px #fff;
     }
     main .cont1>p:nth-child(1){
         font-size: 1000%;
-        font-weight: 300;
         white-space: pre;
         animation: bigtextani;
-        animation-duration: 100s;
+        animation-duration: 60s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-        color: #fff;
         position: absolute;
     }
     main .cont1>p:nth-child(2){
         margin-top: 200px;
         font-size: 1000%;
-        font-weight: 300;
         white-space: pre;
         animation: bigtextani;
-        animation-duration: 100s;
+        animation-duration: 60s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
         animation-direction: reverse;
-        color: #fff;
         position: absolute;
     }
-
+    main .cont1>p>span{
+        color: #fff;
+    }
     main .cont1 .main .mainimg{
         width: 100%;
         margin: 0 auto;
@@ -275,9 +294,9 @@ body::-webkit-scrollbar-track{
         100%{transform: translateX(-2000px);}
     }
     main .cont2{
-        width: 90%;
+        width: 95%;
         height: 100%;
-        max-width: 1200px;
+        max-width: 1300px;
         margin: 10% auto;
         display: flex;
         justify-content: space-between;
@@ -289,7 +308,7 @@ body::-webkit-scrollbar-track{
     }
     main .cont2 ul li{
         position: relative;
-        padding: 20px 0;
+        padding: 30px 0;
         border-bottom: 1px solid #aaa;
         margin-bottom: 20px;
     }
@@ -302,7 +321,7 @@ body::-webkit-scrollbar-track{
         align-items: center;
     }
     main .cont2 ul li>a>p:nth-child(1){
-        font-size: 50px;
+        font-size: 80px;
     }
     main .cont2 ul li:hover>a>p:nth-child(1){
         color: #D9FF02;

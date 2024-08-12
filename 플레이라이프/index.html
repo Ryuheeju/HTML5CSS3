@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        li{list-style: none;}
+        a{text-decoration: none;}
+        #wrap{
+            width: 100%;
+        }
+        #wrap .top{
+            width: 100%;
+            height: 40px;
+            background: #222;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            z-index: 1;
+        }
+        #wrap .top>p{
+            margin: 0 auto;
+            color: #fff;
+        }
+        #wrap .top .closed{
+            padding-right: 20px;
+        }
+
+        main{
+            width: 100%;
+            display: flex;
+            background: #eee;
+            margin: 0 auto;
+        }
+        main .left{
+            width: 40%;
+            height: 953px;
+        }
+        main .left>p{
+            width: 40%;
+            height: 100%;
+            position: fixed;
+        }
+        main .left>p>img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        main .left>p:after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: rgba(0, 0, 0, 0.375);
+
+        }
+        main .left .txt1{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 600px;
+            left: 50px;
+            color: #fff;
+            display: flex;
+            position: fixed;
+            flex-direction: column;
+        }
+        main .left .txt1 p{
+            width: 100%;
+            padding-bottom: 20px;
+        }
+        main .left .txt1 p:nth-child(1){
+            font-size: 24px;
+            font-weight: bold;
+        }
+        main .left .txt1 p:nth-child(2){
+            font-size: 56px;
+            line-height: 60px;
+            font-weight: bold;
+        }
+        main .left .txt1 p:nth-child(3){
+            font-size: 20px;
+        }
+        main .left .txt1 p:nth-child(4){
+            font-size: 20px;
+        }
+        main .left .txt1 p:nth-child(4)>span{
+            font-weight: bold;
+        }
+        main .right{
+            width: 55%;
+            display: flex;
+            margin: 0 auto;
+        }
+        main .right>li{
+            width: 50%;
+            gap: 20px;
+            padding-top: 77px;
+        }
+        main .right>li>ul>li{
+            margin-bottom: 108px;
+        }
+        main .right>li>ul>li>p:nth-child(1){
+            width: 473px;
+            height: 591px;
+            overflow: hidden;
+        }
+        main .right>li>ul>li>p:nth-child(1) img{
+            transition: 0.5s;
+        }
+        main .right>li>ul>li>p:nth-child(1):hover img{
+            transform: scale(1.1);
+        }
+        main .right>li>ul>li>p img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        main .right>li>ul>li>p:nth-child(2){
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+        main .right>li>ul>li>p:nth-child(3){
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 9px;
+        }
+        main .right>li>ul>li>p:nth-child(4){
+            font-size: 16px;
+            margin-top: 9px;
+        }
+        main .right>li>ul>li>p:nth-child(5){
+            font-size: 16px;
+            margin-top: 12px;
+        }
+        main .right>li:nth-child(2){
+            padding-top: 163px;
+        }
+        @media screen and (max-width:1200px){
+            main{
+                
+            }
+            main .left{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="top">
+            <p>마음 성장 플랫폼, 플레이라이프</p>
+            <div class="closed">
+                <p><img src="https://playlife.kr/skin/image/icon/icon_banner_close.svg" alt="닫기"></p>
+            </div>
+        </div>
+        <main>
+            <div class="left">
+                <p><img src="./images/main.jpg" alt="메인이미지"></p>
+                <div class="txt1">
+                    <p>PEOPLE</p>
+                    <P>기록은 미래의 나에게<BR>보내는 다정한 안부</P>
+                    <P>"기록이 진해질수록 허무함은 희미해져요"</P>
+                    <P><span>김신지 l </span>에세이 작가</P>
+                </div>
+            </div>
+            <div class="right">
+                <li class="first">
+                    <ul>
+                        <li>
+                            <p><img src="./images/m01.jpg" alt="m01"></p>
+                            <p>PEOPLE</p>
+                            <P>이어지는 삶 속에서 새로 발견한 것</P>
+                            <P>"나만의 목표를 갖고 작은 시도를 계속 해보는 게 중요해요"</P>
+                            <P><strong>박찬종 |</strong>크리에이터, 패러사이클링 선수</P>
+                        </li>
+                        <li>
+                            <p><img src="./images/m03.jpg" alt="m02"></p>
+                            <p>PEOPLE</p>
+                            <P>잘하고 싶은 마음보다 일단'시작'하는 마음으로</P>
+                            <P>"작은 목표를 향해 한 걸음, 한 걸음 내딛다 보면'끝'도 있더라고요"</P>
+                            <P><strong>서귤 |</strong>작가</P>
+                        </li>
+                    </ul>
+                </li>
+                <li class="second">
+                    <ul>
+                        <li>
+                            <p><img src="./images/m02.jpg" alt="m03"></p>
+                            <p>PEOPLE</p>
+                            <P>행복은 아주 작은 것에서부터</P>
+                            <P>"살아가는 모든 순간, 아이와 같은 마음이 필요해요"</P>
+                            <P><strong>누아 |</strong>일러스트레이터</P>
+                        </li>
+                        <li>
+                            <p><img src="./images/m04.jpg" alt="m04"></p>
+                            <p>PEOPLE</p>
+                            <P>기사를 쓰는데 이렇게까지</P>
+                            <P>"휠체어를 타고 바퀴를 굴리자마자'내가 알던 세상이 아니구나.'느꼈어요."</P>
+                            <P><strong>남형도 |</strong>기자</P>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

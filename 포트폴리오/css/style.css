@@ -313,13 +313,13 @@ body::-webkit-scrollbar-track{
         width: 100%;
         height: 100%;
         top: 27px;
-        left: 257px;
+        left: 281px;
         background-image: url(../images/banner_more_02.svg);
         background-repeat: no-repeat;
     }
 
     main .banner .loopbar a>p{
-        padding-left: 15px;
+        margin-left: 15px;
     }
     main .banner .loopbar a>p:nth-child(1),
     main .banner .loopbar a>p:nth-child(3){
@@ -328,7 +328,6 @@ body::-webkit-scrollbar-track{
     }
     main .banner .loopbar a>p.bar{
         position: relative;
-        overflow: hidden;
     }
     main .banner .loopbar a>p.bar::before{
         content: "";
@@ -337,17 +336,18 @@ body::-webkit-scrollbar-track{
         position: absolute;
         background: #fff;
         animation: bar;
-        animation: rotate;
-        animation-duration: 10s;
+        animation-duration: 37.6s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
+        transform-origin: left;
     }
-    @keyframes bar {
-        0%{transform: scaleY(0%);}
-        100%{transform: scaleY(100%);}
+    @keyframes bar{
+        0%{transform: scaleX(0);}
+        100%{transform: scaleX(1);}
     }
     main .banner .loopbar a>p:nth-child(4){
         padding-left: 20px;
+        padding-right: 10px;
     }
 
     main .banner .video{

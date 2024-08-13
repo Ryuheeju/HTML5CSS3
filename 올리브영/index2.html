@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        input[type="radio"]{display: none;}
+        .main{
+            width: 100%;
+            max-width: 1420px;
+            margin: 100px auto;
+            display: flex;
+            font-family: 'pretendard', sans-serif;
+        }
+        .main .left{
+            width: 40%;
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            /* background: #ddd; */
+        }
+        .main .left>p{
+            font-size: 54px;
+            font-weight: bold;
+        }
+        .main .left .label{
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            color: #565e65;
+            line-height: 30px;
+        }
+        #photo1:checked ~ label:first-of-type,
+        #photo2:checked ~ label:nth-of-type(2),
+        #photo3:checked ~ label:nth-of-type(3),
+        #photo4:checked ~ label:nth-of-type(4){
+            color: #82dc28;
+            font-weight: bold;
+        }
+        .main .right{
+            flex: 1;
+        }
+        .main .right>ul{
+            width: 100%;
+        }
+        .main .right>ul>li{
+            display: flex;
+            padding-bottom: 150px;
+        }
+        .main .right>ul>li>p{
+            padding-right: 80px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #82dc28;
+        }
+        .main .right>ul>li>.cont br.hi{
+            display: none;
+        }
+        .main .right>ul>li>.cont>p>img{
+            height: 400px;
+        }
+        .main .right>ul>li>.cont .desc>p:nth-child(1){
+            font-size: 30px;
+            font-weight: bold;
+            padding: 40px 0;
+        }
+        .main .right>ul>li>.cont .desc>p:nth-child(2){
+            font-size: 18px;
+            padding-bottom: 40px;
+            line-height: 28px;
+            color: #565e65;
+        }
+        .main .right>ul>li>.cont .desc>p:nth-child(3) a{
+            font-weight: bold;
+            border-bottom: 1px solid;
+            color: #000;
+            position: relative;
+        }
+        .main .right>ul>li>.cont .desc>p:nth-child(3) a:after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -15px;
+            background-image: url(https://corp.oliveyoung.com/img/pc-svg-418cd3751e7d1a9a4c3a8099b78970fd.svg);
+            width: 10px;
+            height: 10px;
+            margin-left: 8px;
+            background-position: -272px -324px;
+        }
+        @media screen and (max-width:1170px){
+            .main{
+                width: 95%;
+                flex-direction: column;
+            }
+            .main .left{
+                width: 100%;
+                height: 66px;
+                position: relative;
+            }
+            .main .left>p{
+                font-size: 30px;
+            }
+            .main .left .label{
+                display: none;
+            }
+            .main .right>ul>li{
+                margin-top: 50px;
+                flex-direction: column;
+                padding-bottom: 40px;
+            }
+            .main .right>ul>li>p{
+                font-size: 13px;
+                padding-bottom: 20px;
+            }
+            .main .right>ul>li>p::after{
+                content: "올리브영 매장(국내)";
+                padding-left: 10px;
+                color: #565e65;
+                font-weight: normal;
+            }
+            .main .right>ul>li>.cont br{
+                display: none;
+            }
+            .main .right>ul>li>.cont br.hi{
+            display: block;
+            }
+            .main .right>ul>li>.cont>p{
+                height: 600px;
+            }
+            .main .right>ul>li>.cont>p>img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .main .right>ul>li>.cont .desc>p:nth-child(1){
+                font-size: 18px;
+                padding-bottom: 20px;
+            }
+            .main .right>ul>li>.cont .desc>p:nth-child(2){
+                font-size: 13px;
+                line-height: 20px;
+                padding-bottom: 20px;
+            }
+            .main .right>ul>li>.cont .desc>p:nth-child(3) a{
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <p>OLIVE YOUNG<br>Platforms</p>
+            <div class="label">
+                <input type="radio" name="photo" id="photo1" checked>
+                <input type="radio" name="photo" id="photo2">
+                <input type="radio" name="photo" id="photo3">
+                <input type="radio" name="photo" id="photo4">
+                <label for="photo1">올리브영 매장</label>
+                <label for="photo2">올리브영 Online(국내)</label>
+                <label for="photo3">올리브영 글로벌</label>
+                <label for="photo4">디플롯</label>
+            </div>
+        </div>
+        <div class="right">
+            <ul>
+                <li class="1">
+                    <p>01</p>
+                    <div class="cont">
+                        <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform1-cf428ca64855adc4a1062251b83cf683.jpg;jsessionid=7BC121942C23E39A4C49460695D7726B" alt="photo"></p>
+                        <div class="desc">
+                            <p>고객과 가장 가까운 곳에서<br><br class="hi">건강한 아름다움을 제안합니다.</p>
+                            <p>우리는 1,300여개의 매장을 기반으로 고객에게<br class="hi">뷰티&헬스 상품을 큐레이션합니다.<br class="hi"><br>또한 체험형 콘텐츠와 커머스의 연계를 통해<br class="hi">파트너사들에게<br>매력적인 브랜딩, 마케팅 채널로<br class="hi"> 진화하고 있습니다.</p>
+                            <p><a href="#">올리브영 매장이 보고 싶다면?</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="2">
+                    <p>02</p>
+                    <div class="cont">
+                        <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform2-777eecd5b0d28e7c17848bfe3dffe645.jpg;jsessionid=7BC121942C23E39A4C49460695D7726B" alt="photo"></p>
+                        <div class="desc">
+                            <p>고객이 건강한 아름다움을 찾아가는<br><br class="hi">온라인 PLAYGROUND를 제공합니다.</p>
+                            <p>우리는 차별화된 온라인 콘텐츠와 AI기술 기반<br class="hi">상품 추천을 통해 월 이용자 수 480만명,<br>멤버십 회원 수 1,400만명 이상의 뷰티&헬스 커뮤니티를<br class="hi">구현했습니다.<br class="hi"><br>또한 업계 최초 당일 배송 서비스인 오늘드림을<br class="hi">실행하여 고객경험을 혁신했습니다.</p>
+                            <p><a href="#">올리브영 매장이 보고 싶다면?</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="3">
+                    <p>03</p>
+                    <div class="cont">
+                        <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform3-c78371c66bba75b227096ecd0f128e12.jpg;jsessionid=7BC121942C23E39A4C49460695D7726B" alt="photo"></p>
+                        <div class="desc">
+                            <p>고객과 가장 가까운 곳에서<br>건강한 아름다움을 제안합니다.</p>
+                            <p>우리는 1,300여개의 매장을 기반으로 고객에게 뷰티&헬스 상품을 큐레이션합니다.또한 체험형 콘텐츠와 커머스의 연계를 통해 파트너사들에게 매력적인 브랜딩, 마케팅 채널로 진화하고 있습니다.</p>
+                            <p><a href="#">올리브영 매장이 보고 싶다면?</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="4">
+                    <p>04</p>
+                    <div class="cont">
+                        <p><img src="https://corp.oliveyoung.com/img/tmp/tmp_img_platform4-7c45898de0bdfb1de922247a126d8886.jpg;jsessionid=7BC121942C23E39A4C49460695D7726B" alt="photo"></p>
+                        <div class="desc">
+                            <p>고객과 가장 가까운 곳에서<br>건강한 아름다움을 제안합니다.</p>
+                            <p>우리는 1,300여개의 매장을 기반으로 고객에게 뷰티&헬스 상품을 큐레이션합니다.또한 체험형 콘텐츠와 커머스의 연계를 통해 파트너사들에게 매력적인 브랜딩, 마케팅 채널로 진화하고 있습니다.</p>
+                            <p><a href="#">올리브영 매장이 보고 싶다면?</a></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

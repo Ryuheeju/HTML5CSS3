@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        li{list-style: none;}
+        a{text-decoration: none; color: #fff;}
+        #wrap{
+            width: 100%;
+            height: 100%;
+        }
+        #wrap header{
+            width: 100%;
+            height: 100px;
+            background: #000;
+            position: fixed;
+            z-index: 999;
+        }
+        #wrap header>ul{
+            display: flex;
+        }
+        #wrap header>ul li.menu>ul{
+            display: flex;
+            line-height: 100px;
+            padding-left: 20px;
+        }
+        #wrap header>ul li.menu>ul>li{
+            padding: 0 26px;
+            position: relative;
+        }
+        #wrap header>ul li.menu>ul>li::before{
+            content: "";
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #fff;
+            display: none;
+        }
+        #wrap header>ul li.menu>ul>li:hover:before{
+            display: block;
+        }
+        #wrap header>ul li.menu>ul>li.BRAND:before{
+            background: #ffdd00;
+        }
+        #wrap header>ul li.menu>ul>li>a{
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        #wrap header>ul li.menu>ul>li.BRAND>a{
+            color: #ffdd00;
+        }
+        #wrap header>ul li.menu>ul>li.LAUNCHING{
+            position: relative;
+        }
+        #wrap header>ul li.menu>ul>li.LAUNCHING::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 15px;
+            background: #aaa;
+        }
+        #wrap header>ul li.rightmenu{
+            padding-left: 14%;
+        }
+        #wrap header>ul li.rightmenu>ul{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        #wrap header>ul li.rightmenu>ul>li{
+            padding-left: 25px;
+        }
+        #wrap header>ul li.rightmenu>ul>li>a>p:nth-child(1){
+            width: 25px;
+            height: 25px;
+            margin: 0 auto;
+            padding-bottom: 5px;
+        }
+        #wrap header>ul li.rightmenu>ul>li>a>p:nth-child(1)>img{
+            width: 100%;
+            height: 100%;
+        }
+        #wrap header>ul li.rightmenu>ul>li>a>p:nth-child(2){
+            font-size: 10px;
+        }
+
+        /* main */
+        #wrap .main{
+            position: relative;
+            top: 100px;
+            display: flex;
+        }
+        #wrap .main .left{
+            width: 37%;
+            position: sticky;
+            top: 100px;
+            height: 100%;
+        }
+        #wrap .main .left>p{
+            width: 100%;
+            height: 100vh;
+        }
+        #wrap .main .left>p>img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #wrap .main .right{
+            flex: 1;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+
+        }
+        #wrap .main .right .right1{
+            display: flex;
+            flex-direction: column;
+        }
+        #wrap .main .right .right1>div{
+            width: 100%;
+            height: 100%;
+            padding: 50px;
+            border: 1px solid;
+            border-left: none;
+            border-top: none;
+            box-sizing: border-box;
+        }
+        #wrap .main .right .right1.end>div{
+            border-right: none;
+        }
+        #wrap .main .right .right1>div>a>p:nth-child(1){
+            width: 502px;
+            height: 502px;
+        }
+        #wrap .main .right .right1>div>a>p:nth-child(1) img{
+            width: 100%;
+            height: 100%;
+        }
+        #wrap .main .right .right1>div>a>p:nth-child(2){
+            color: #000;
+            font-size: 24px;
+            font-weight: bold;
+            padding-top: 15px;
+        }
+        #wrap .main .right .right1>div>a>.item{
+            padding-top: 15px;
+        }
+        #wrap .main .right .right1>div>a>.item .subitem{
+            color: #000;
+            display: flex;
+            padding-top: 15px;
+            align-items: center;
+        }
+        #wrap .main .right .right1>div>a>.item .subitem>p:nth-child(1){
+            width: 100px;
+            height: 100px;
+        }
+        #wrap .main .right .right1>div>a>.item .subitem>p:nth-child(1) img{
+            width: 100%;
+        }
+        #wrap .main .right .right1>div>a>.item .subitem .txt{
+            padding-left: 10px;
+            font-size: 13px;
+        }
+        #wrap .main .right .right1>div>a>.item .subitem .txt>p:nth-child(1){
+            font-weight: bold;
+            padding-bottom: 5px;
+        }
+        #wrap .main .right .right1>div>a>.item .subitem .txt>p:nth-child(2){
+            padding-bottom: 15px;
+        }
+        #wrap .main .right .right1>div>a>.item .subitem .txt>p:nth-child(3){
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <ul>
+                <li class="logo">
+                    <a href="#">
+                        <img src="https://image.a-rt.com/art/system/site/202207/1658299263779.jpg" alt="logo">
+                    </a>
+                </li>
+                <li class="menu">
+                    <ul>
+                        <li class="BRAND">
+                            <a href="#">
+                                <p>BRAND</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>A-RT TV</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>A-RT LIVE</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>TREND</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>CATALOGUE</p>
+                            </a>
+                        </li>
+                        <li class="LAUNCHING">
+                            <a href="#">
+                                <p>LAUNCHING</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>NEWS</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>랭킹</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>이벤트/쿠폰</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>기획전</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="rightmenu">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <p>
+                                    <img src="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'30'%20height%3D'30'%3E%3Cdefs%3E%3CclipPath%20id%3D'a'%3E%3Cpath%20fill%3D'%23fff'%20stroke%3D'%23707070'%20d%3D'M1655%2027h30v30h-30z'%20data-name%3D'71'%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D'url(%23a)'%20data-name%3D'10'%20transform%3D'translate(-1655%20-27)'%3E%3Cg%20fill%3D'none'%20stroke%3D'%23fff'%20stroke-width%3D'1.5'%20data-name%3D'162'%3E%3Cg%20data-name%3D'26'%20transform%3D'rotate(-45%20874.102%20-1972.802)'%3E%3Ccircle%20cx%3D'11.5'%20cy%3D'11.5'%20r%3D'11.5'%20stroke%3D'none'%2F%3E%3Ccircle%20cx%3D'11.5'%20cy%3D'11.5'%20r%3D'10.75'%2F%3E%3C%2Fg%3E%3Cpath%20d%3D'm1682.075%2055.074-7.38-7.379'%20data-name%3D'104'%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="SEARCH">
+                                </p>
+                                <p>SEARCH</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Cg data-name='160'%3E%3Cg data-name='158'%3E%3Cg data-name='156'%3E%3Cg data-name='101'%3E%3Cpath d='M27.25 28.25H7.75V1.75h19.5v26.5Z'/%3E%3Cpath fill='%23fff' d='M8.5 2.5v25h18v-25h-18M7 1h21v28H7V1Z'/%3E%3C/g%3E%3Cpath d='M7 7h12v16H7z' data-name='59'/%3E%3C/g%3E%3Cg fill='none' stroke='%23fff' stroke-width='1.5' data-name='157'%3E%3Cpath d='M13.35 20.657 19.005 15 13.35 9.343' data-name='102'/%3E%3Cpath d='M2.953 15.001h16.054' data-name='103'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="LOGIN"></p>
+                                <p>LOGIN</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18.266' height='17.97'%3E%3Cpath fill='%23fff' d='M1 17.945H0a8.653 8.653 0 0 1 8.849-8.421 7.928 7.928 0 0 1 3.691.781l-.432.9a6.914 6.914 0 0 0-3.259-.682A7.653 7.653 0 0 0 1 17.945Z' data-name='Path 11'/%3E%3Cpath fill='%23fff' d='M8.467 0a5.265 5.265 0 1 1-5.265 5.265A5.271 5.271 0 0 1 8.467 0Zm0 9.529a4.265 4.265 0 1 0-4.265-4.264 4.27 4.27 0 0 0 4.265 4.264Z' data-name='Ellipse 4'/%3E%3Cpath fill='%23fff' d='M18.268 15.045h-7v-1h7Z' data-name='Line 1'/%3E%3Cpath fill='%23fff' d='M15.267 17.972h-1v-7h1Z' data-name='Line 2'/%3E%3C/svg%3E" alt="JOIN"></p>
+                                <p>JOIN</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Cg data-name='13'%3E%3Cg fill='none' data-name='82'%3E%3Cpath d='M5.614 20h19.772l4.387 8.921H1.227Z'/%3E%3Cpath fill='%23fff' d='m6.548 21.5-2.912 5.92h23.728l-2.912-5.92H6.548M5.614 20h19.772l4.387 8.92H1.227L5.614 20Z'/%3E%3C/g%3E%3Cg data-name='84'%3E%3Cpath d='M15.5 1.204c4.891 0 8.87 4.053 8.87 9.035 0 2.045-1.609 5.279-4.652 9.353a73.905 73.905 0 0 1-4.217 5.112 73.905 73.905 0 0 1-4.217-5.112c-3.044-4.074-4.652-7.308-4.652-9.353 0-4.982 3.978-9.035 8.869-9.035Z'/%3E%3Cpath fill='%23fff' d='M15.501 23.578a72.248 72.248 0 0 0 3.608-4.423c3.925-5.253 4.511-7.84 4.511-8.916 0-4.569-3.642-8.285-8.12-8.285-4.476 0-8.118 3.716-8.118 8.285 0 1.073.584 3.655 4.494 8.893a72.272 72.272 0 0 0 3.625 4.446m0 2.235s-9.62-10.17-9.62-15.574S10.189.454 15.502.454c5.312 0 9.619 4.38 9.619 9.785 0 5.404-9.62 15.574-9.62 15.574Z'/%3E%3C/g%3E%3Cg fill='none' stroke='%23fff' stroke-width='1.5' data-name='25' transform='translate(11 6)'%3E%3Ccircle cx='4.5' cy='4.5' r='4.5' stroke='none'/%3E%3Ccircle cx='4.5' cy='4.5' r='3.75'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="SHOP"></p>
+                                <p>SHOP</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <div class="main">
+            <div class="left">
+                <p><img src="https://image.a-rt.com//art/display/gs/contents/202408/20240808091730240.jpg" alt="main"></p>
+            </div>
+            <div class="right">
+                <div class="right1">
+                    <div>
+                        <a href="#">
+                            <p><img src="https://image.a-rt.com//art/display/template/202407/1722417002874.jpg?shrink=600:*" alt="img1"></p>
+                            <p>SPECIAL EVENT<br>마음을 편안하게 하는 여름휴가</p>
+                            <div class="item">
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/06/58094_1719203861629.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>크록스</p>
+                                        <p>클래식 올 터레인 클로그</p>
+                                        <p>47,000원</p>
+                                    </div>
+                                </div>
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/07/47668_1719806964132.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>크록스</p>
+                                        <p>클래식 올 터레인 클로그</p>
+                                        <p>65,000원</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p><img src="https://image.a-rt.com//art/display/template/202408/1723076030034.jpg?shrink=600:*" alt="img1"></p>
+                            <p>모든 날 모든 순간<br>All DAYS!</p>
+                            <div class="item">
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/07/40765_1720406993817.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>나이키</p>
+                                        <p>우먼스 나이키스포츠웨어 링거 티셔츠</p>
+                                        <p>39,000원</p>
+                                    </div>
+                                </div>
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/07/89143_1719802454059.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>나이키</p>
+                                        <p>우먼스 나이키 코르테즈 TXT OPP1</p>
+                                        <p>119,000원</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p><img src="https://image.a-rt.com//art/display/template/202408/1722994303572.jpg?shrink=600:*" alt="img1"></p>
+                            <p>나만의 크록스 꾸미기!<br>기간한정 지비츠 균일가 할인전</p>
+                            <div class="item">
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/08/75507_1722906900307.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>크록스</p>
+                                        <p>케어 베어스 우산</p>
+                                        <p>1,900원</p>
+                                    </div>
+                                </div>
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/04/50529_1713417886607.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>크록스</p>
+                                        <p>미니 3D 사탕</p>
+                                        <p>1,900원</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p><img src="https://image.a-rt.com//art/display/template/202408/1723000971801.png?shrink=600:*" alt="img1"></p>
+                            <p>한 주간 베스트를 알아보는<br>"주간오픽"8월 1주 아디다스편</p>
+                            <div class="item">
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/08/75507_1722906900307.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>크록스</p>
+                                        <p>케어 베어스 우산</p>
+                                        <p>1,900원</p>
+                                    </div>
+                                </div>
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/04/50529_1713417886607.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>크록스</p>
+                                        <p>미니 3D 사탕</p>
+                                        <p>1,900원</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p><img src="https://image.a-rt.com//art/display/template/202408/1723000971801.png?shrink=600:*" alt="img1"></p>
+                            <p>한 주간 베스트를 알아보는<br>"주간오픽"8월 1주 아디다스편</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="right1 end">
+                    <div>
+                        <a href="#">
+                            <p><img src="https://image.a-rt.com//art/display/template/202408/1722587825598.jpg?shrink=600:*" alt="img1"></p>
+                            <p>클리어런스 세일<br>썸머 시즌 오프 시작합니다!</p>
+                            <div class="item">
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/06/50909_1718092719059.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>크록스</p>
+                                        <p>클래식 올 터레인 클로그</p>
+                                        <p>47,000원</p>
+                                    </div>
+                                </div>
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2023/05/50442_1683189406143.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>크록스</p>
+                                        <p>클래식 올 터레인 클로그</p>
+                                        <p>65,000원</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p><img src="https://image.a-rt.com//art/display/template/202408/1723428204905.jpg?shrink=600:*" alt="img1"></p>
+                            <p>모든 날 모든 순간<br>All DAYS!</p>
+                            <div class="item">
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/07/40765_1720406993817.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>나이키</p>
+                                        <p>우먼스 나이키스포츠웨어 링거 티셔츠</p>
+                                        <p>39,000원</p>
+                                    </div>
+                                </div>
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/07/89143_1719802454059.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>나이키</p>
+                                        <p>우먼스 나이키 코르테즈 TXT OPP1</p>
+                                        <p>119,000원</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p><img src="https://image.a-rt.com//art/display/template/202408/1723076030034.jpg?shrink=600:*" alt="img1"></p>
+                            <p>모든 날 모든 순간<br>All DAYS!</p>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <p><img src="https://image.a-rt.com//art/display/template/202408/1723076030034.jpg?shrink=600:*" alt="img1"></p>
+                            <p>모든 날 모든 순간<br>All DAYS!</p>
+                            <div class="item">
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/07/40765_1720406993817.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>나이키</p>
+                                        <p>우먼스 나이키스포츠웨어 링거 티셔츠</p>
+                                        <p>39,000원</p>
+                                    </div>
+                                </div>
+                                <div class="subitem">
+                                    <p><img src="https://image.a-rt.com/art/product/2024/07/89143_1719802454059.jpg?shrink=224:224" alt="img1"></p>
+                                    <div class="txt">
+                                        <p>나이키</p>
+                                        <p>우먼스 나이키 코르테즈 TXT OPP1</p>
+                                        <p>119,000원</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

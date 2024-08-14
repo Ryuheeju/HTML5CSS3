@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        #wrap{
+            width: 100%;
+            max-width: 1714px;
+            padding: 0 96px;
+            margin: 0 auto;
+            display: flex;
+        }
+        #wrap .left{
+            width: 80%;
+            background: #ddd;
+            position: sticky;
+        }
+        #wrap .left .input>p{
+            font-size: 72px;
+            font-weight: bold;
+        }
+        #wrap .left .input .search{
+            display: flex;
+        }
+        #wrap .right{
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="left">
+            <div class="input">
+                <p>삼원특수지<br>입니다.</p>
+                <div class="search">
+                    <p><input type="search" placeholder="어떤 제품을 찾고 계신가요?"></p>
+                    <p><img src="https://www.samwonpaper.com/resources/_asset/pc/common/images/icon/icon-search-black-large.png" alt="icon"></p>
+                </div>
+                <div class="sub">
+                    <p>엠보스/패턴</p>
+                    <p>#캘린더/다이어리</p>
+                    <p>#FSC</p>
+                </div>
+            </div>
+            <div class="headline">
+                <p>좋은 사람을<br>느낌으로 알 듯이</p>
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

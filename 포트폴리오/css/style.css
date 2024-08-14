@@ -389,6 +389,52 @@ body::-webkit-scrollbar-track{
         0%{transform: rotate(0deg);}
         100%{transform: rotate(360deg);}
     }
+    main .cont0{
+        width: 100%;
+        margin: 200px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main .cont0>p{
+        width: 600px;
+        height: 600px;
+    }
+    main .cont0>p:nth-child(1) img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0 20px 20px 0;
+    }
+    main .cont0>p:nth-child(3) img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px 0  0 20px;
+    }
+    main .cont0>.cont0txt{
+        width: 20%;
+        color: #fff;
+        text-align: center;
+    }
+    main .cont0>.cont0txt>p:nth-child(1){
+        font-size: 32px;
+    }
+    main .cont0>.cont0txt>p:nth-child(2){
+        font-size: 24px;
+        padding-top: 20px;
+    }
+    main .cont0>.cont0txt>p.button{
+        margin-top: 60px;
+    }
+    main .cont0>.cont0txt>p.button a{
+        font-size: 16px;
+        border: 1px solid;
+        padding: 20px 50px;
+        border-radius: 10px;
+    }
+
+
 
     main .cont1{
         width: 100%;
@@ -458,6 +504,8 @@ body::-webkit-scrollbar-track{
         0%{transform: translateX(0px);}
         100%{transform: translateX(-2000px);}
     }
+
+
     main .cont2{
         width: 95%;
         height: 100%;
@@ -504,6 +552,8 @@ body::-webkit-scrollbar-track{
         width: 30px;
         position: absolute;
     }
+
+
 
     main .cont3{
         width: 90%;
@@ -589,8 +639,11 @@ body::-webkit-scrollbar-track{
         padding-top: 40px;
         color: #999;
     }
+
+
+
     main .cont4{
-        width: 60%;
+        width: 70%;
         height: 100%;
         max-width: 1600px;
         display: flex;
@@ -658,6 +711,68 @@ body::-webkit-scrollbar-track{
     .cont4.reverse .cont4txt{
         align-items: flex-end;
         padding-right: 100px;
+    }
+
+
+    .cont5{
+        padding: 100px 0;
+        width: 90%;
+        height: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+        color: #fff;
+        text-align: center;
+    }
+    .cont5>p{
+        font-size: 32px;
+        padding-bottom: 100px;
+    }
+    .cont5 .gallary{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 385px 385px 385px 385px;
+        grid-template-rows: 385px 385px;
+        gap: 20px;
+    }
+    .cont5 .gallary .photo1{
+        border-radius: 20px;
+        background-image: url(../images/photo1.jpg);
+        background-size: cover;
+    }
+    .cont5 .gallary .photo2{
+        border-radius: 20px;
+        background-image: url(../images/photo1.jpg);
+        background-size: cover;
+    }
+    .cont5 .gallary .photo3{
+        border-radius: 20px;
+        background-image: url(../images/photo1.jpg);
+        background-size: cover;
+    }
+    .cont5 .gallary .photo4{
+        border-radius: 20px;
+        background-image: url(../images/photo1.jpg);
+        background-size: cover;
+    }
+    .cont5 .gallary .photo5{
+        border-radius: 20px;
+        background-image: url(../images/photo1.jpg);
+        background-size: cover;
+    }
+    .cont5 .gallary .photo6{
+        border-radius: 20px;
+        background-image: url(../images/photo1.jpg);
+        background-size: cover;
+    }
+    .cont5 .gallary .photo7{
+        border-radius: 20px;
+        background-image: url(../images/photo1.jpg);
+        background-size: cover;
+    }
+    .cont5 .gallary .photo8{
+        border-radius: 20px;
+        background-image: url(../images/photo1.jpg);
+        background-size: cover;
     }
  
 /* main끝 */

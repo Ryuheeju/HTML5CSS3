@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="txt">하나</p>
+    <p class="txt">둘</p>
+    <p class="txt">셋</p>
+    <p class="txt">넷</p>
+    <p class="txt">다섯</p>
+    <div>
+        <p class="txt">하나</p>
+        <p class="txt">둘</p>
+        <p class="txt">셋</p>
+        <p class="txt">넷</p>
+        <p class="txt">다섯</p>
+    </div>
+    <h4>제목태그</h4>
+    <h3>제목태그</h3>
+    <script>
+        /*document.querySelector(".txt").style.color="red";querySelector제일처음*/
+        /*document.querySelectorAll(".txt")[0].style.color="red";querySelectorAll전체중에서 첫번째*/
+        // document.querySelector("div>p").style.color="red";
+        document.querySelectorAll("div>p")[2].style.color="red";
+        document.querySelector("h3,h4").style.color="red";/*제일처음만나는 개체만 바뀐다*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            position: absolute;
+            width: 500px;
+            top: 0;
+            left: 200px;
+            background: #fff;
+        }
+        img.on{display: block;}
+    </style>
+</head>
+<body>
+    <p class="txt">보도자료</p>
+    <p class="txt">언론보도</p>
+    <p class="txt">cjbs now</p>
+    <p class="txt">미디어</p>
+    <p class="txt">뉴스구독(E-MAIL)</p>
+    <div>
+        <section>보도자료</section>
+        <section>언론보도</section>
+        <section>cjbs now</section>
+        <section>미디어</section>
+        <section>뉴스구독(E-MAIL)</section>
+    </div>
+    <script>
+            document.querySelectorAll(".txt").forEach(function(keys,item){
+            console.log(keys);
+            keys.onclick=function(){
+                console.log(item);
+                document.getElementsByTagName("section")[0].src="./images/photo"+(item+1)+".jpg";
+            }
+        });
+
+    </script>
+</body>
+</html>

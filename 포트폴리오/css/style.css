@@ -640,6 +640,7 @@ body::-webkit-scrollbar-track{
         height: 55px;
         overflow: hidden;
         word-break: keep-all;
+        line-height: 30px;
     }
     main .cont3 .inner>ul li a> .txt p:nth-child(3){
         font-size: 16px;

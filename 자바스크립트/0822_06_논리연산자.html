@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let a = 10;//숫자 10
+        let b = 20;//숫자 20
+        let c = 30;//숫자 20
+        let d = a > b && b < c;//저건 두개둘다 true여야함
+        document.write("논리곱 : ",d,"<br>");//false
+
+        d = a > b || b < c;//논리합은 둘중하나만 참이여도 true
+        document.write("논리합 : ",d,"<br>");// true
+
+        d = !(a > b) || b < c;//참을 부정할지 거짓을 부정할지_느낌표가 not연산자
+        document.write("논리부정 : ",d,"<br>");// true
+
+    </script>
+</body>
+</html>

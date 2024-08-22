@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let a = 10;
+        let b = 20;
+        a = 30;
+        document.write("a : " + a+"<br>"); 
+        document.write("a + b : " , a + b,"<br>"); 
+        //좌우의 식을 연결할때 +대신 ,를 사용해도된다
+
+        document.write("a - b : " + (a - b)+"<br>"); 
+        document.write("a * b : " + (a * b)+"<br>"); 
+        document.write("a / b : " + (a / b)+"<br>"); 
+        document.write("a % b : " + (a % b)+"<br>"); 
+        document.write("a ** b : " + (a ** b)+"<br>"); 
+
+        document.write("++a : " + (++a) +"<br>"); /*전위연산 1씩증가*/
+        document.write("a++ : " + (a++) +"<br>"); /*후위연산 1씩증가*/
+        document.write("a : " + a +"<br>"); /**/
+
+        document.write("--a : " + (--a) +"<br>"); /*전위연산 1씩감소*/
+        document.write("a-- : " + (a--) +"<br>"); /*후위연산 1씩감소*/
+        document.write("a : " , a ,"<br>"); /**/
+
+        let c = "하나";
+        let d = "둘";
+        let e = "셋";
+        let txt;
+        txt = "";//txt=비어있음
+
+        txt +=c //txt = txt + c;//txt=하나
+        txt +=d //txt = txt + d;//txt=하나 둘
+        txt +=e //txt = txt + e;//txt=하나 둘 셋
+        document.write(txt);
+
+    </script>
+</body>
+</html>

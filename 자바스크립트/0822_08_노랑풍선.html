@@ -104,9 +104,7 @@
 				document.querySelector("#wrap .menu > ul > li > a").style.color="#ffc72c"
 				document.querySelector("#wrap header").style.backgroundColor="#fff";
 				document.querySelector("#wrap header .logo a").style.backgroundPosition="0 -47px";
-				sub.forEach(function(value,key){
-					value.classList.add("on");
-				});
+				sub.forEach(function(value,key){value.classList.add("on");});
 				document.querySelector("#wrap .menu .bg").classList.add("on");
 			};
 
@@ -114,10 +112,8 @@
 				document.querySelector("#wrap .menu > ul > li > a").style.color="#fff"
 				document.querySelector("#wrap header").style.backgroundColor="transparent";
 				document.querySelector("#wrap header .logo a").style.backgroundPosition="0 0";
-				sub.forEach(function(value,key){
-				value.classList.remove("on");
-			});
-			document.querySelector("#wrap .menu .bg").classList.remove("on");
+				sub.forEach(function(value,key){value.classList.remove("on");});
+				document.querySelector("#wrap .menu .bg").classList.remove("on");
 			}
 		});
 

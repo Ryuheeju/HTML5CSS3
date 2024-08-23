@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		ul{list-style: none;}
+		a{text-decoration: none;color: #333;}
+        #wrap{
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+		ul.btn{
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 94px 177px;
+            position: absolute;
+            z-index: 2;   
+            margin: 10px 300px; 
+        }
+		.btn li{width: 180px;height: 180px;line-height: 64px;text-align: center;}
+		.btn li a{display: block;height: 100%; width: 100%;border-radius: 50%;background: rgb(34, 34, 34);color: rgba(255,255,255,0.5);}
+        .btn li a img{position: relative;top: 50%;transform: translateY(-50%);        }
+		.btn li a.on{background: rgb(34, 34, 34);}
+		.content{position: relative;}
+		.content li{position: absolute;left: 0;top: 0;width: 100%;height: 500px;display: flex;align-items: center;justify-content: center;text-align: center;opacity: 0;transition: 0.5s;}
+		.content li.on{opacity: 1;}
+		.content li div h2,.content li div p{position: relative;top: 20px;opacity: 0;transition: 1s;}
+		.content li div p{transition-delay: 0.5s;}
+		.content li div h2.on,.content li div p.on{top: 0;opacity: 1;}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+        <ul class="btn">
+            <li><a href="#"><img src="./images/ico_main_value01.svg" alt=""></a></li>
+            <li><a href="#"><img src="./images/ico_main_value02.svg" alt=""></a></li>
+            <li><a href="#"><img src="./images/ico_main_value03.svg" alt=""></a></li>
+            <li><a href="#"><img src="./images/ico_main_value04.svg" alt=""></a></li>
+            <li><a href="#"><img src="./images/ico_main_value05.svg" alt=""></a></li>
+            <li><a href="#"><img src="./images/ico_main_value06.svg" alt=""></a></li>
+        </ul>
+        <ul class="content">
+            <li>
+                <div>
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+	<script>
+		let btn=document.querySelectorAll(".btn li");
+		let con=document.querySelectorAll(".content li");
+		btn[0].querySelector("a").classList.add("on");
+		con[0].classList.add("on");
+		con[0].querySelector("div h2").classList.add("on");
+		con[0].querySelector("div p").classList.add("on");
+		con.forEach(function(value,key){
+			value.style.background = "url(./images/main_value0"+(key+1)+".jpg)";
+            value.style.backgroundSize="cover"
+		});
+			function my(){
+				btn.forEach(function(value,key){
+					value.querySelector("a").classList.remove("on");
+				})
+			}
+		btn.forEach(function(value,key){
+			value.onmouseenter=function(e){
+				e.preventDefault();
+				my();
+				console.log(key);
+				con.forEach(function(value,key){
+					value.classList.remove("on");
+					value.querySelector("div h2").classList.remove("on");
+					value.querySelector("div p").classList.remove("on");
+				})
+				btn[key].querySelector("a").classList.add("on");
+				con[key].classList.add("on");
+				con[key].querySelector("div h2").classList.add("on");
+				con[key].querySelector("div p").classList.add("on");
+			}
+            
+		}
+        )
+	</script>
+</body>
+</html>

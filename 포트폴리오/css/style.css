@@ -729,9 +729,10 @@ body::-webkit-scrollbar-track{
         color: #fff;
         text-align: center;
     }
-    .cont5>p{
-        font-size: 32px;
-        padding-bottom: 100px;
+    .cont5>p:nth-child(1){
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 60px;
     }
     .cont5 .gallary{
         width: 100%;

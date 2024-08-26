@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.write(typeof fruits + "<br>");
+        document.write(fruits.join(" * ")+ "<br>");
+        document.write(typeof fruits.join(" * ")+ "<br>");
+        document.write(typeof fruits + "<br>");
+        document.write(fruits[0]+" * "+fruits[1]+" * "+fruits[2]+" * "+fruits[3]+ "<br>")
+        document.write(`${fruits[0]} * ${fruits[1]} * ${fruits[2]} * ${fruits[3]}<br>`)
+        fruits.pop();//마지막 요소삭제
+        document.write(fruits+"<br>");
+        //변수 문자 결합 +연산자
+        //좌우의 식 연결 ,연산자
+
+        //`${변수}<br>`이렇게쓰면 "" 이나 +는 생략해도 괜춘
+        document.write(`${fruits}<br>`);
+
+        fruits.push("Kiwi");//마지막에 새 요소추가
+        document.write(`${fruits}<br>`);
+
+        fruits.shift();//첫번째 요소 제거
+        document.write(`${fruits}<br>`);
+        
+        fruits.unshift("Lemon");//첫번째 요소 대신 추가
+        document.write(`${fruits}<br>`);
+        document.write(`${fruits.length}<br>`);//요소개수,인덱스 번호보다 1개더 큼
+        
+        const myGirls = ["Cecilie", "Lone"];
+        const myBoys = ["Emil", "Tobias", "Linus"];
+        const myChildren = myGirls.concat(myBoys);
+        document.write(`${typeof myChildren}<br>`);
+        document.write(`${myChildren}<br>`);
+
+        document.write(`${myChildren.splice(2,0,"Tom")}<br>`);
+        document.write(`${myChildren}<br>`);
+
+        document.write(`${myChildren.splice(2,1,"ann")}<br>`);//2번째 자리 1개의 데이터를 지우고 대체
+        document.write(`${myChildren}<br>`);
+
+        document.write(`${myChildren.splice(2,1,"ann","tom")}<br>`);//2번째 자리 1개의 데이터를 지우고 대체
+        document.write(`${myChildren}<br>`);
+
+        document.write(`${myChildren.splice(2,1,"")}<br>`);//대체할 문자가 없는 경우
+        document.write(`${myChildren}<br>`);
+
+        document.write(`${myChildren.slice(1,3)}<br>`);
+        document.write(`${myChildren.slice(-2,-1)}<br>`);
+        document.write(`${myChildren.sort()}<br>`);//오름차순
+        document.write(`${myChildren.sort().reverse()}<br>`);//내림차순
+
+</script>
+</body>
+</html>

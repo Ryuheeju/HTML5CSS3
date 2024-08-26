@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		ul{list-style: none;}
+		a{text-decoration: none;color: #333;}
+		.btn{width: 1200px;margin: 50px auto;display: flex;justify-content: center;gap: 15px;margin-bottom: 300px;}/*ul*/
+		.btn li{line-height: 45px;text-align: center;}
+		.btn li a{display: block;width: 100%;background: #fff;color: #111;border: 1px solid #ccc;margin: 0 20px;font-size: 14px;}
+		.btn li a.on{background: #211955;color: #fff;}
+		.content{position: relative;}
+		.content li{position: absolute;left: 0;top: 0;width: 100%;height: 624px;display: flex;align-items: center;justify-content: center;text-align: center;opacity: 0;}
+		.content li.on{opacity: 1;}
+		.content li>p>img{
+			position: relative;
+			top: -450px;
+			left: 75%;
+		}
+		.content li div h2,p{font-size: 36px;font-weight: bold;color: #fff;}
+		.content li div h2,.content li div>p{position: relative;top: 20px;opacity: 0;left: -100px;}
+		/*.content li div p{transition-delay: 0.5s;}*/
+		.content li div h2.on,.content li div p.on{top: 0;opacity: 1;}
+	</style>
+</head>
+<body>
+	<ul class="btn">
+		<li><a href="#">ELLE</a></li>
+		<li><a href="#">COSMOPOLITAN</a></li>
+		<li><a href="#">Harper’s BAZAAR</a></li>
+		<li><a href="#">ESQUIRE</a></li>
+		<li><a href="#">STUDIO DOT</a></li>
+		<li><a href="#">YEET</a></li>
+	</ul>
+	<ul class="content">
+		<li>
+			<p><img src="./images/title1.svg" alt="img"></p>
+			<div>
+				<h2>NO.1</h2>
+				<p>FASHION & LIFESTYLE<br>
+					MEDIA</p>
+			</div>
+		</li>
+		<li>
+			<p><img src="./images/title2.svg" alt="img"></p>
+			<div>
+				<h2></h2>
+				<p>Fun, Fearless, Female</p>
+			</div>
+		</li>
+		<li>
+			<div>
+				<p><img src="./images/title3.svg" alt="img"></p>
+				<h2></h2>
+				<p>Realistic<br>
+					Inspiration from<br>
+					Artistic Creation</p>
+			</div>
+		</li>
+		<li>
+			<p><img src="./images/title4.svg" alt="img"></p>
+			<div>
+				<h2></h2>
+				<p>MAN<br>
+					AT<br>
+					HIS BEST</p>
+			</div>
+		</li>
+		<li>
+			<p><img src="./images/title5.svg" alt="img"></p>
+			<div>
+				<h2></h2>
+				<p>콘텐츠로 증명하는 '스튜디오닷'<br>
+					브랜드와 고객의 니즈를 넘나드는<br>
+					A to Z 콘텐츠 솔루션 실행</p>
+			</div>
+		</li>
+		<li>
+			<p><img src="./images/title6.svg" alt="img"></p>
+			<div>
+				<h2></h2>
+				<p>Little<br>
+					Pleasures<br>
+					of Life</p>
+			</div>
+		</li>
+	</ul>
+	<script>
+		let btn=document.querySelectorAll(".btn li");
+		let con=document.querySelectorAll(".content li");
+		btn[0].querySelector("a").classList.add("on");
+		con[0].classList.add("on");
+		con[0].querySelector("div h2").classList.add("on");
+		con[0].querySelector("div p").classList.add("on");
+		con.forEach(function(value,key){
+			value.style.background = "url(./images/img_visual_"+(key+1)+".png)";
+		});
+			function my(){
+				btn.forEach(function(value,key){
+					value.querySelector("a").classList.remove("on");
+				})
+			}
+		btn.forEach(function(value,key){
+			value.onclick=function(e){
+				e.preventDefault();
+				my();
+				console.log(key);
+				con.forEach(function(value,key){
+					value.classList.remove("on");
+					value.querySelector("div h2").classList.remove("on");
+					value.querySelector("div p").classList.remove("on");
+				})
+				btn[key].querySelector("a").classList.add("on");
+				con[key].classList.add("on");
+				con[key].querySelector("div h2").classList.add("on");
+				con[key].querySelector("div p").classList.add("on");
+			}
+		})
+	</script>
+</body>
+</html>

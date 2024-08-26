@@ -15,10 +15,15 @@
 		.content{position: relative;}
 		.content li{position: absolute;left: 0;top: 0;width: 100%;height: 624px;display: flex;align-items: center;justify-content: center;text-align: center;opacity: 0;}
 		.content li.on{opacity: 1;}
+		.content li>p:nth-child(1){
+			width: 300px;
+			position: relative;
+			left: 230px;
+		}
 		.content li>p>img{
 			position: relative;
 			top: -450px;
-			left: 75%;
+			width: 100%;			
 		}
 		.content li div h2,p{font-size: 36px;font-weight: bold;color: #fff;}
 		.content li div h2,.content li div>p{position: relative;top: 20px;opacity: 0;left: -100px;}
@@ -37,6 +42,7 @@
 	</ul>
 	<ul class="content">
 		<li>
+			
 			<p><img src="./images/title1.svg" alt="img"></p>
 			<div>
 				<h2>NO.1</h2>

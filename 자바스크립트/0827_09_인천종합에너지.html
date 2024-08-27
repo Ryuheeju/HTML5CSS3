@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .wrap{
+            width: 1500px;
+            margin: 50px auto;
+        }
+        .wrap div{
+            border-bottom: 1px solid #ccc;
+        }
+        .wrap div > h2{
+            padding: 30px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .wrap div > h2 >span::before{
+            content: "";
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            background: #000;
+        }
+        .wrap div > h2 >span::after{
+            content: "";
+            display: block;
+            position: relative;
+            width: 4px;
+            height: 30px;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #000;
+        }
+        .wrap div > p{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="first">
+            <h2>GS파워<span></span></h2>
+            <p><img src="./images/img_collective_a01.jpg" alt="img1"></p>
+        </div>
+        <div class="second">
+            <h2>인천종합에너지<span></span></h2>
+            <p><img src="./images/img_collective_b01.jpg" alt="img1"></p>
+        </div>
+    </div>
+    <script>
+        let bool = true;
+        document.querySelector(".wrap div > h2").onclick = function(){
+            if(bool){
+                document.querySelector(".wrap .first > p").style.display = "none";
+            }
+            else {
+                document.querySelector(".wrap div > p").style.display = "block";
+            }
+            bool = !bool;
+        }
+        let bool2 = true;
+        document.querySelector(".wrap .second > h2").onclick = function(){
+            if(bool2){
+                document.querySelector(".wrap .second > p").style.display = "none";
+            }
+            else {
+                document.querySelector(".wrap .second > p").style.display = "block";
+            }
+            bool2 = !bool2;
+        }
+    </script>
+</body>
+</html>

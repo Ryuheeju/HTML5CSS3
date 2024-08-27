@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>show / hide</button>
+    <p><img src="./images/photo1.jpg" alt="img"></p>
+    <script>
+        let bool = true;
+        document.querySelector("button").onclick = function(){
+            if(bool){
+                document.querySelector("p").style.display = "none";
+                document.write("<button>hide</button>").style.backgroundImage = url("./images/photo1.jpg")
+            }
+            else {
+                document.querySelector("p").style.display = "block";            
+            }
+            bool = !bool;
+        }
+    </script>
+</body>
+</html>

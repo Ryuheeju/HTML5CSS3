@@ -752,9 +752,11 @@ body::-webkit-scrollbar-track{
     .cont5 .gallary > li img{
         width: 100%;
         transition: 0.3s;
+        
     }
     .cont5 .gallary > li img:hover{
-        width: 110%;
+        width: 105%;
+
     }
 
     .cont6{
@@ -774,5 +776,8 @@ body::-webkit-scrollbar-track{
         display: flex;
         justify-content: space-between;
     }
- 
+    footer .foot{
+        width: 100%;
+        background: #ccc;
+    }
 /* main끝 */

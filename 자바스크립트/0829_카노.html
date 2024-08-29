@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<style>
+        .wrap{
+            width: 100%;
+            display: flex;
+            margin: 0 auto;
+            background: #f5f5f5;
+        }
+        .cont{
+            display: flex;
+            
+        }
+        .text>p{
+            font-size: 54px;
+            font-weight: lighter;
+            margin-left: 250px;
+            
+        }
+        .list{position: relative;z-index: 1;left: 200px;}
+		.txt{color: #000;width: 655px;height: 171px;background-color: #f5f5f5;display: flex;align-items: center;justify-content: space-between;padding: 0 50px;box-sizing: border-box;}
+        .txt:hover p:first-child>img{ filter: invert(100%);}
+        .txt:hover .arrow>img{filter: none;}
+        .txt .arrow>img{filter: invert(100%);}
+        .txt>p:nth-child(2){
+            position: absolute;
+            opacity: 0;
+        }
+        .txt>p:last-child{width: 60px;height: 60px;background: #f5f5f5;border-radius: 50%;opacity: 1;text-align: center;line-height: 60px;}
+        .txt>p.arrow{line-height: 70px;}                
+        .contxt p:nth-child(1){font-size: 28px;line-height: 5px;}
+        div section{top: 0;right: 0;height: 300px;background: #fff;display: none;position: absolute;}
+		.active{color: #fff;background-color: #bf1e2e;border-radius: 20px;width: 750px;padding: 0 80px;}
+		.on{display: block;}
+        .hi{opacity: 1;}
+        .cont{width: 100%;}
+        section{height: 779px;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+        <div class="cont">
+            <div class="text">
+                <p>카노와 함께하는<br>브랜드를 소개합니다.</p>
+                <div class="list">
+                    <div class="txt">
+                        <P><img src="./images/kano_icon_01_1.png" alt="icon1"></P>       
+                        <div class="contxt">
+                            <p>이지스토리</p>
+                            <p>산뜻한 일상의 이야기를 전하는 정직한 브랜드입니다.</p>
+                        </div>
+                        <p class="arrow"><img src="./images/arrow.svg" alt="arrow"></p>
+                    </div>
+                    <div class="txt">
+                        <P><img src="./images/kano_icon_02_1.png" alt="icon1"></P>    
+                        <div class="contxt">
+                            <p>페슬러</p>
+                            <p>반려동물과 함께하는 우리의 일상을 위한 브랜드입니다.</p>
+                        </div>
+                        <p class="arrow"><img src="./images/arrow.svg" alt="arrow"></p>
+                    </div>
+                    <div class="txt">
+                        <P><img src="./images/kano_icon_03_1.png" alt="icon1"></P>    
+                        <div class="contxt">
+                            <p>홈케어</p>
+                            <p>보다 나은 홈 라이프를 위한 방법을 만드는 브랜드입니다.</p>
+                        </div>
+                        <p class="arrow"><img src="./images/arrow.svg" alt="arrow"></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <section><img src="./images/img01.jpg" alt="img01"></section>
+                <section><img src="./images/img02.jpg" alt="img02"></section>
+                <section><img src="./images/img03.jpg" alt="img03"></section>
+            </div>
+        </div>
+    </div>
+	<script>
+		document.querySelectorAll(".txt")[0].classList.add("active");//텍스트
+		document.querySelectorAll("section")[0].classList.add("on");//이미지
+		document.querySelectorAll(".arrow")[0].classList.add("hi");//화살표
+		function myfnc(){
+			document.querySelectorAll(".txt").forEach(function(keys,item){
+				keys.classList.remove("active");
+			});
+			document.querySelectorAll(".arrow").forEach(function(keys,item){
+				keys.classList.remove("hi");
+			});
+		}
+	    document.querySelectorAll(".txt").forEach(function(keys,item){
+			console.log(keys);
+			keys.onmouseenter=function(){
+				myfnc();
+				keys.classList.add("active");
+				console.log(item);
+				document.querySelectorAll("section").forEach(function(value,key){
+					value.classList.remove("on");
+				})
+				document.querySelectorAll("section")[item].classList.add("on");
+			}
+		}
+        );
+	</script>
+</body>
+</html>
